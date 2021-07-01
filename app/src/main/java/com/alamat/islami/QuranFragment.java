@@ -14,18 +14,13 @@ import android.view.ViewGroup;
 
 import com.alamat.islami.databinding.FragmentQuranBinding;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 
 public class QuranFragment extends Fragment {
 
     FragmentQuranBinding binding;
     View view;
 
-    //for RecyclerView
-    RecyclerViewAdapterQuranList adapter;
+    RecyclerViewAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
 
     public static String[] listOfSewarNames ={"الفاتحة","البقرة","آل عِمْران","النسَاء","المائدة","الأنعَام","الأعراف","الأنفال","التوبَة","يونس","هُود"
@@ -47,15 +42,18 @@ public class QuranFragment extends Fragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_quran,container,false);
         view = binding.getRoot();
 
-        //for RecyclerView
-        adapter = new RecyclerViewAdapterQuranList(listOfSewarNames);
+
+        // RecyclerView set up
+        adapter = new RecyclerViewAdapter(listOfSewarNames, RecyclerViewAdapter.LIST);
         layoutManager = new LinearLayoutManager(getContext());
 
         binding.recyclerView.setAdapter(adapter);
         binding.recyclerView.setLayoutManager(layoutManager);
-        // </.>
 
-        adapter.setOnItemClickedListener(new RecyclerViewAdapterQuranList.OnItemClickedListener() {
+        //<./>
+
+        //go to item page
+        adapter.setOnItemClickedListener(new RecyclerViewAdapter.OnItemClickedListener() {
             @Override
             public void onItemClick(int position, String[] quranListModels) {
                 Intent intent = new Intent(getContext(), SorhPage.class);
@@ -63,6 +61,7 @@ public class QuranFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        //</.>
 
         return view;
     }

@@ -12,15 +12,17 @@
 
         <ImageView
             android:id="@+id/iv_hadeth_labeled"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/quran_label"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/label_layout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvHadethhName"
+            android:id="@+id/tv_hadethName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@+id/iv_hadeth_labeled"
@@ -28,7 +30,7 @@
             app:layout_constraintTop_toTopOf="@+id/iv_hadeth_labeled"
             app:layout_constraintBottom_toBottomOf="@+id/iv_hadeth_labeled"
             android:text="الحديث "
-            android:textSize="12sp"
+            android:textSize="13sp"
             android:textColor="@color/black"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

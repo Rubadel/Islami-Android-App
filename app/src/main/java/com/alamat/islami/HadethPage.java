@@ -6,22 +6,24 @@ import androidx.databinding.DataBindingUtil;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.alamat.islami.databinding.ActivityHadethPageBinding;
 import com.alamat.islami.databinding.ActivitySorhPageBinding;
 
-public class SorhPage extends AppCompatActivity {
+public class HadethPage extends AppCompatActivity {
 
-    ActivitySorhPageBinding binding;
-    String sorhName;
+    ActivityHadethPageBinding binding;
+    String hadethName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_sorh_page);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_hadeth_page);
+
 
         Intent i = getIntent();
         // getIntent().getExtras().getString("sorhName");
-        sorhName = i.getStringExtra("sorhName");
-        binding.tvSorhName.setText(sorhName);
+        hadethName = i.getStringExtra("hadethName");
+        binding.tvHadethName.setText(hadethName);
 
     }
 }

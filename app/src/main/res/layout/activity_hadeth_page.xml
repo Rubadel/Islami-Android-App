@@ -10,14 +10,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".SorhPage"
+        tools:context=".HadethPage"
         android:background="@drawable/frame_removebg_preview">
 
         <TextView
-            android:id="@+id/tv_sorh_Name"
+            android:id="@+id/tv_hadeth_Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="السورة"
+            android:text="الحديث"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -6,33 +6,36 @@
 
     </data>
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/bkGreen">
+        android:background="@color/white"
+        android:backgroundTint="@color/bkGreen">
 
         <ImageView
             android:id="@+id/iv_quran_labeled"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/quran_label"
+            android:src="@drawable/label_layout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="3dp"/>
+            android:layout_marginTop="1dp"/>
 
         <TextView
             android:id="@+id/tv_sorh_Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@+id/iv_quran_labeled"
-            app:layout_constraintEnd_toEndOf="@+id/iv_quran_labeled"
-            app:layout_constraintTop_toTopOf="@+id/iv_quran_labeled"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_quran_labeled"
+            android:layout_marginBottom="9dp"
             android:text="سورة "
-            android:textSize="12sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_quran_labeled" app:layout_constraintEnd_toEndOf="@+id/iv_quran_labeled"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/iv_quran_labeled"
+            app:layout_constraintTop_toTopOf="@+id/iv_quran_labeled"
+            app:layout_constraintVertical_bias="0.681" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
