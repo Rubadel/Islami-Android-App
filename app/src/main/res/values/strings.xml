@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Islamic</string>
+    <string name="quran_label">قرآن</string>
+    <string name="hadeth_label">أحاديث</string>
+    <string name="sebha_label">سبحة</string>
+    <string name="radio_label">راديو</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //For Spinner view
+    <string-array name="athkar">
+        <item> سبحان الله </item>
+        <item> الحمدلله </item>
+        <item> الله أكبر </item>
+    </string-array>
+
+</resources>
