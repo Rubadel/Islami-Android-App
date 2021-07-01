@@ -14,6 +14,9 @@ import android.view.ViewGroup;
 
 import com.alamat.islami.databinding.FragmentQuranBinding;
 
+import java.io.File;
+import java.util.Objects;
+
 
 public class QuranFragment extends Fragment {
 
@@ -44,7 +47,7 @@ public class QuranFragment extends Fragment {
 
 
         // RecyclerView set up
-        adapter = new RecyclerViewAdapter(listOfSewarNames, RecyclerViewAdapter.LIST);
+        adapter = new RecyclerViewAdapter(listOfSewarNames, RecyclerViewAdapter.LISTlist);
         layoutManager = new LinearLayoutManager(getContext());
 
         binding.recyclerView.setAdapter(adapter);
@@ -62,6 +65,7 @@ public class QuranFragment extends Fragment {
             }
         });
         //</.>
+
 
         return view;
     }

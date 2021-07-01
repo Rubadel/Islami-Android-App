@@ -1,5 +1,6 @@
 package com.alamat.islami;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,10 +41,11 @@ public class HadethFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_hadeth,container,false);
+
         view = binding.getRoot();
 
         //for RecyclerView
-        adapter = new RecyclerViewAdapter(listOfAhadethNames,RecyclerViewAdapter.GIRD );
+        adapter = new RecyclerViewAdapter(listOfAhadethNames,RecyclerViewAdapter.GIRDlist );
         layoutManager = new GridLayoutManager(getContext(),2);
 
         binding.recyclerView.setAdapter(adapter);
@@ -54,13 +57,23 @@ public class HadethFragment extends Fragment {
         adapter.setOnItemClickedListener(new RecyclerViewAdapter.OnItemClickedListener() {
             @Override
             public void onItemClick(int position, String[] quranListModels) {
+                showDialog();
                 Intent intent = new Intent(getContext(), SorhPage.class);
-                intent.putExtra("hadethName", listOfAhadethNames[position]);
+                intent.putExtra("hadethName",listOfAhadethNames[position]);
                 startActivity(intent);
             }
         });
         //<./>
 
         return view;
+    }
+
+    private void showDialog(){
+
+        Dialog dialog = new Dialog(getContext());
+//        dialog.setContentView();
+//        binding = DataBindingUtil.setContentView(getActivity(), R.layout.activity_hadeth_page);
+        dialog.setContentView(R.layout.activity_hadeth_page);
+        dialog.show();
     }
 }

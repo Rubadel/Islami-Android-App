@@ -6,7 +6,9 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.MenuItem;
+import android.view.WindowManager;
 
 import com.alamat.islami.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -19,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        requestWindowFeature(getWindow().FEATURE_NO_TITLE);
+//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         binding.navBar.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
@@ -44,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.hadeth_btn_nav:
+
                     fragment = new HadethFragment();
                     break;
 
