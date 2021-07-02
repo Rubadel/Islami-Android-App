@@ -1,6 +1,10 @@
 package com.alamat.islami;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
+import android.content.res.Resources;
+import android.content.res.loader.AssetsProvider;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
@@ -14,7 +18,13 @@ import android.view.ViewGroup;
 
 import com.alamat.islami.databinding.FragmentQuranBinding;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -38,6 +48,22 @@ public class QuranFragment extends Fragment {
             "الهُمَزة","الفِیل","قريش","الماعُون","الكوثر","الكافِرون","النّصر","المسَد","الإخلاص","الفَلَق","الناس"};
 
 
+//    RecyclerViewAdapterConent recyclerViewAdapterConent;
+//
+//    List<contentModel> contentModels;
+//    List<contentModel> contentModelLines = new ArrayList<contentModel>();
+//    try ( BufferedReader bufferedReader = new BufferedReader(
+//            new InputStreamReader(getAssets().open("text1")))){
+//        String line = "";
+//        int i =0;
+//
+//        while ((line = bufferedReader.readLine()) != null){
+//            contentModel contentModel = new contentModel();
+//
+//        }
+//    }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -58,7 +84,7 @@ public class QuranFragment extends Fragment {
         //go to item page
         adapter.setOnItemClickedListener(new RecyclerViewAdapter.OnItemClickedListener() {
             @Override
-            public void onItemClick(int position, String[] quranListModels) {
+            public void onItemClick(int position, String[] ListModels) {
                 Intent intent = new Intent(getContext(), SorhPage.class);
                 intent.putExtra("sorhName", listOfSewarNames[position]);
                 startActivity(intent);

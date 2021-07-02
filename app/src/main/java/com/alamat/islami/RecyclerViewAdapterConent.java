@@ -23,9 +23,9 @@ public class RecyclerViewAdapterConent extends RecyclerView.Adapter<RecyclerView
         this.contentModels = contentModels;
     }
 
-    RecyclerViewAdapter.OnItemClickedListener onItemClickedListener;
+    RecyclerViewAdapterConent.OnItemClickedListener onItemClickedListener;
 
-    public void setOnItemClickedListener(RecyclerViewAdapter.OnItemClickedListener onItemClickedListener) {
+    public void setOnItemClickedListener(RecyclerViewAdapterConent.OnItemClickedListener onItemClickedListener) {
         this.onItemClickedListener = onItemClickedListener;
     }
 
@@ -78,7 +78,7 @@ public class RecyclerViewAdapterConent extends RecyclerView.Adapter<RecyclerView
     }
 
     public interface OnItemClickedListener {
-        void onItemClick(int position, String[] ListModels);
+        void onItemClick(int position, String[] lines);
     }
 }
 

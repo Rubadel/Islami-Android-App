@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
     private String[] ListModels;
-    int itemView;
+    int typeView;
 // private ArrayList<contentModel> contentModels;
 
     public static final int LISTlist = 100;
@@ -29,14 +29,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public RecyclerViewAdapter(String[] ListModel, int typeView) {
         this.ListModels = ListModel;
-        this.itemView = typeView;
+        this.typeView = typeView;
         //this.contentModels = contentModels;
 
     }
 
 
     OnItemClickedListener onItemClickedListener;
-
     public void setOnItemClickedListener(OnItemClickedListener onItemClickedListener) {
         this.onItemClickedListener = onItemClickedListener;
     }
@@ -48,18 +47,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
 
         //Quran List
-        if (itemView == LISTlist) {
+        if (typeView == LISTlist) {
             ItemQuranListBinding listBinding = DataBindingUtil
                     .inflate(LayoutInflater.from(parent.getContext()), R.layout.item_quran_list, parent, false);
             return new ViewHolder(listBinding);
 
             //Hadeth List
-        } else if (itemView == GIRDlist) {
+        } else if (typeView == GIRDlist) {
             ItemHadethListBinding gridbinding = DataBindingUtil
                     .inflate(LayoutInflater.from(parent.getContext()), R.layout.item_hadeth_list, parent, false);
             return new ViewHolder(gridbinding);
 //
-//        }else if (itemView == CONTENT) {
+//        }else if (typeView == CONTENT) {
 //            ItemContentBinding contentBinding = DataBindingUtil
 //                    .inflate(LayoutInflater.from(parent.getContext()), R.layout.item_content ,parent, false);
 //            return new ViewHolder(contentBinding);
@@ -80,11 +79,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 //      ArrayList<contentModel> contentModels = new ArrayList<contentModel>();
 
         //Quran
-        if (itemView == LISTlist) {
+        if (typeView == LISTlist) {
             holder.listBinding.tvSorhName.setText(ListModels[position]);
 
             //Hadeth
-        } else if (itemView == GIRDlist) {
+        } else if (typeView == GIRDlist) {
             holder.gridBinding.tvHadethName.setText(ListModels[position]);
         }
 
