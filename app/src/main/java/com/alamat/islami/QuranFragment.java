@@ -47,6 +47,7 @@ public class QuranFragment extends Fragment {
             ,"التين","العَلَق","القدْر","البیّنة","الزَّلزّلة","العَاديَات","القارعَة","التكاثر","العَصر",
             "الهُمَزة","الفِیل","قريش","الماعُون","الكوثر","الكافِرون","النّصر","المسَد","الإخلاص","الفَلَق","الناس"};
 
+    String[] lines={};
 
 //    RecyclerViewAdapterConent recyclerViewAdapterConent;
 //
@@ -81,15 +82,36 @@ public class QuranFragment extends Fragment {
 
         //<./>
 
+
+        try {
+            InputStream inputStream = getContext().getAssets().open("myText.txt");
+            int size = inputStream.available();
+            byte[] buffer = new byte[size];
+            inputStream.read(buffer);
+            lines = new String[buffer.length];
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
         //go to item page
         adapter.setOnItemClickedListener(new RecyclerViewAdapter.OnItemClickedListener() {
             @Override
             public void onItemClick(int position, String[] ListModels) {
                 Intent intent = new Intent(getContext(), SorhPage.class);
                 intent.putExtra("sorhName", listOfSewarNames[position]);
+                intent.putExtra("lines",lines);
                 startActivity(intent);
             }
         });
+
+//        adapter.setOnItemClickedListener(new RecyclerViewAdapterConent.OnItemClickedListener() {
+//            @Override
+//            public void onItemClick(int position, String[] lines) {
+//
+//            }
+//        });
+
         //</.>
 
 

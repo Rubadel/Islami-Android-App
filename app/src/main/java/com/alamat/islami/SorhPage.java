@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SorhPage extends AppCompatActivity {
@@ -23,9 +24,9 @@ public class SorhPage extends AppCompatActivity {
     String sorhName;
 
 
-    RecyclerViewAdapterConent adapterConent;
+    RecyclerViewAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
-    String[] lines;
+    List lines;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,27 +38,28 @@ public class SorhPage extends AppCompatActivity {
         sorhName = i.getStringExtra("sorhName");
         binding.tvSorhName.setText(sorhName);
 
+        lines = Arrays.asList(i.getStringArrayExtra("lines"));
 
-        adapterConent = new RecyclerViewAdapterConent(lines);
+        adapter = new RecyclerViewAdapter(lines);
         layoutManager = new LinearLayoutManager(this);
 
-        binding.recyclerViewLines.setAdapter(adapterConent);
+        binding.recyclerViewLines.setAdapter(adapter);
         binding.recyclerViewLines.setLayoutManager(layoutManager);
 
-        adapterConent.setOnItemClickedListener(new RecyclerViewAdapterConent.OnItemClickedListener() {
-            @Override
-            public void onItemClick(int position, String[] lines) {
-                try {
-                    InputStream inputStream = getAssets().open("myText.txt");
-                    int size = inputStream.available();
-                    byte[] buffer = new byte[size];
-                    inputStream.read(buffer);
-                    lines = new String[buffer.length];
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+//        adapterConent.setOnItemClickedListener(new RecyclerViewAdapterConent.OnItemClickedListener() {
+//            @Override
+//            public void onItemClick(int position, String[] lines) {
+//                try {
+//                    InputStream inputStream = getAssets().open("myText.txt");
+//                    int size = inputStream.available();
+//                    byte[] buffer = new byte[size];
+//                    inputStream.read(buffer);
+//                    lines = new String[buffer.length];
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
 
     }
 }

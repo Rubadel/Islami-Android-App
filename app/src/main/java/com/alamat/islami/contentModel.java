@@ -5,16 +5,16 @@ import java.util.ArrayList;
 
 public class contentModel {
 
-    String[] line ={};
-    public contentModel(String[] line) {
+    String line ;
+    public contentModel(String line) {
         this.line = line;
     }
 
-    public String[] getLine() {
+    public String getLine() {
         return line;
     }
 
-    public void setLine(String[] line) {
+    public void setLine(String line) {
         this.line = line;
     }
 }
