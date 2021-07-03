@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.alamat.islami.databinding.ItemContentBinding;
 import com.alamat.islami.databinding.ItemHadethListBinding;
 import com.alamat.islami.databinding.ItemQuranListBinding;
 
@@ -18,39 +17,53 @@ import java.util.ArrayList;
 
 import static android.media.CamcorderProfile.get;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class RecyclerViewAdapterList extends RecyclerView.Adapter<RecyclerViewAdapterList.ViewHolder> {
 
-    private String[] ListModels;
+    String[] ListModels;
     int typeView;
+
     ArrayList<String> contentLines;
 
     // typeView vars
     public static final int LISTlist = 100;
     public static final int GIRDlist = 200;
-    public static final int CONTENT = 300;
+//    public static final int CONTENT = 300;
 
 
     //constructors
-    public RecyclerViewAdapter(String[] ListModel, int typeView) {
+
+    public void setListModels(String[] listModels) {
+        ListModels = listModels;
+    }
+
+    public String[] getListModels() {
+        return ListModels;
+    }
+
+    public RecyclerViewAdapterList(String[] ListModel, int typeView) {
         this.ListModels = ListModel;
         this.typeView = typeView;
     }
 
-    public RecyclerViewAdapter(ArrayList<String> contentLines) {
-        this.contentLines = contentLines;
-    }
+//    public RecyclerViewAdapterList(ArrayList<String> contentLines) {
+//        this.contentLines = contentLines;
+//    }
+
+//    public ArrayList<String> getContentLines() {
+//        return contentLines;
+//    }
 
     // for interface
     OnItemClickedListener onItemClickedListener;
+
     public void setOnItemClickedListener(OnItemClickedListener onItemClickedListener) {
         this.onItemClickedListener = onItemClickedListener;
     }
 
 
-    @NonNull
     @NotNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         //Quran List
         if (typeView == LISTlist) {
@@ -64,10 +77,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     .inflate(LayoutInflater.from(parent.getContext()), R.layout.item_hadeth_list, parent, false);
             return new ViewHolder(gridbinding);
 
-        }else if (typeView == CONTENT) {
-            ItemContentBinding contentBinding = DataBindingUtil
-                    .inflate(LayoutInflater.from(parent.getContext()), R.layout.item_content ,parent, false);
-            return new ViewHolder(contentBinding);
+//        }else if (typeView == CONTENT) {
+//            ItemContentBinding contentBinding = DataBindingUtil
+//                    .inflate(LayoutInflater.from(parent.getContext()), R.layout.item_content ,parent, false);
+//            return new ViewHolder(contentBinding);
 
 //             default for Quran items
         } else {
@@ -78,9 +91,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull @NotNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-//        String listModel = ListModels[position];
+        String listModel = ListModels[position];
 //        ArrayList<String> contentLines = contentLines.get(position);
 
         //Quran
@@ -93,57 +106,60 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
 
         //Content
-        else if(typeView == CONTENT){
-        holder.contentBinding.tvContent.setText(contentLines.get(position));
+//        else if(typeView == CONTENT){
+//        holder.contentBinding.tvContent.setText(contentLines.get(position)); }
+
+
+    // for interface
+        if(onItemClickedListener !=null) {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClickedListener.onItemClick(position, ListModels[position]);
+            }
+        });
     }
+}
 
-
-        // for interface
-        if (onItemClickedListener != null) {
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    onItemClickedListener.onItemClick(position, ListModels);
-                }
-            });
-        }
-
-    }
 
     @Override
     public int getItemCount() {
 
-        int countReturend =0;
 
-        //return list count
-        if (typeView == LISTlist || typeView == GIRDlist) {
-            if (ListModels == null) {
-                countReturend= 0;
-            } else {
-
-                countReturend= ListModels.length;
-            }
+        if ( ListModels == null){
+            return 0;
+        } else {
+            return ListModels.length;
         }
+
+
+//        int countReturend =0;
+        //return list count
+//        if (typeView == LISTlist || typeView == GIRDlist) {
+//            if (ListModels == null) {
+//                countReturend= 0;
+//            } else {
+//
+//                countReturend= ListModels.length;
+//            }
 
         //return content count
-        else if (typeView == CONTENT) {
-
-            if (contentLines == null) {
-                countReturend= 0;
-            } else {
-
-                countReturend= contentLines.size();
-            }
-        }
-
-        return countReturend;
+//        else if (typeView == CONTENT) {
+//
+//            if (contentLines == null) {
+//                countReturend= 0;
+//            } else {
+//
+//                countReturend= contentLines.size();
+//            }
+//        }
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
         ItemQuranListBinding listBinding;
         ItemHadethListBinding gridBinding;
-        ItemContentBinding contentBinding;
+//        ItemContentBinding contentBinding;
 
         //for Quran view
         public ViewHolder(ItemQuranListBinding listBinding) {
@@ -158,16 +174,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
 
 //        content
-        public ViewHolder(ItemContentBinding contentBinding) {
-            super(contentBinding.getRoot());
-            this.contentBinding = contentBinding;
-        }
+//        public ViewHolder(ItemContentBinding contentBinding) {
+//            super(contentBinding.getRoot());
+//            this.contentBinding = contentBinding;
+//        }
     }
 
 
     //interface for each item
     public interface OnItemClickedListener {
-        void onItemClick(int position, String[] ListModels);
+        void onItemClick(int position, String ListModels);
     }
 }
 

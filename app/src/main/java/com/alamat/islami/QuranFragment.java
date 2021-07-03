@@ -1,10 +1,6 @@
 package com.alamat.islami;
 
 import android.content.Intent;
-import android.content.res.AssetManager;
-import android.content.res.Resources;
-import android.content.res.loader.AssetsProvider;
-import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
@@ -18,22 +14,13 @@ import android.view.ViewGroup;
 
 import com.alamat.islami.databinding.FragmentQuranBinding;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-
 
 public class QuranFragment extends Fragment {
 
     FragmentQuranBinding binding;
     View view;
 
-    RecyclerViewAdapter adapter;
+    RecyclerViewAdapterList adapter;
     RecyclerView.LayoutManager layoutManager;
 
     public static String[] listOfSewarNames ={"الفاتحة","البقرة","آل عِمْران","النسَاء","المائدة","الأنعَام","الأعراف","الأنفال","التوبَة","يونس","هُود"
@@ -55,7 +42,7 @@ public class QuranFragment extends Fragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_quran,container,false);
 
         // RecyclerView set up
-        adapter = new RecyclerViewAdapter(listOfSewarNames, RecyclerViewAdapter.LISTlist);
+        adapter = new RecyclerViewAdapterList(listOfSewarNames, RecyclerViewAdapterList.LISTlist);
         layoutManager = new LinearLayoutManager(getContext());
 
         binding.recyclerView.setAdapter(adapter);
@@ -65,10 +52,12 @@ public class QuranFragment extends Fragment {
 
 
         //go to item page
-        adapter.setOnItemClickedListener(new RecyclerViewAdapter.OnItemClickedListener() {
+        adapter.setOnItemClickedListener(new RecyclerViewAdapterList.OnItemClickedListener() {
             @Override
-            public void onItemClick(int position, String[] ListModels) {
+            public void onItemClick(int position, String ListModels) {
+
                 int indexOfPosition = position;
+
                 Intent intent = new Intent(getContext(), SorhPage.class);
                 intent.putExtra("sorhName", listOfSewarNames[position]);
                 intent.putExtra("indexOfSorh", indexOfPosition);

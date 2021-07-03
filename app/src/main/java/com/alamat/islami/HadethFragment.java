@@ -7,17 +7,13 @@ import android.os.Bundle;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.alamat.islami.databinding.FragmentHadethBinding;
-
-import static com.alamat.islami.QuranFragment.listOfSewarNames;
 
 public class HadethFragment extends Fragment {
 
@@ -25,7 +21,7 @@ public class HadethFragment extends Fragment {
     View view;
 
     //for RecyclerView
-    RecyclerViewAdapter adapter;
+    RecyclerViewAdapterList adapter;
     RecyclerView.LayoutManager layoutManager;
 
     public static String[] listOfAhadethNames = {"الحديث الأول","الحديث الثاني","الحديث الـثـالـث","الحديث الـرابع","الحديث الخامس","الحديث السادس","الحديث السابع","الحديث الثامن","الحديث التاسع","الحديث العاشر",
@@ -45,7 +41,7 @@ public class HadethFragment extends Fragment {
         view = binding.getRoot();
 
         //for RecyclerView
-        adapter = new RecyclerViewAdapter(listOfAhadethNames,RecyclerViewAdapter.GIRDlist );
+        adapter = new RecyclerViewAdapterList(listOfAhadethNames, RecyclerViewAdapterList.GIRDlist );
         layoutManager = new GridLayoutManager(getContext(),2);
 
         binding.recyclerView.setAdapter(adapter);
@@ -54,9 +50,9 @@ public class HadethFragment extends Fragment {
         //<./>
 
         //go to item page
-        adapter.setOnItemClickedListener(new RecyclerViewAdapter.OnItemClickedListener() {
+        adapter.setOnItemClickedListener(new RecyclerViewAdapterList.OnItemClickedListener() {
             @Override
-            public void onItemClick(int position, String[] quranListModels) {
+            public void onItemClick(int position, String quranListModels) {
                 showDialog();
                 Intent intent = new Intent(getContext(), SorhPage.class);
                 intent.putExtra("hadethName",listOfAhadethNames[position]);

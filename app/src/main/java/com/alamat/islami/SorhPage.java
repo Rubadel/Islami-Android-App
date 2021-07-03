@@ -22,13 +22,14 @@ public class SorhPage extends AppCompatActivity {
 
     ActivitySorhPageBinding binding;
 
-    RecyclerViewAdapter adapter;
+    RecycleViewAdapterContent adapter;
     RecyclerView.LayoutManager layoutManager;
 
     String sorhName;
     int indexOfSorh;
     String fileName;
-    public ArrayList<String> contentLines;
+
+    ArrayList<String> text ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,29 +37,89 @@ public class SorhPage extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sorh_page);
 
 
-        Intent intent = getIntent();
-        sorhName = intent.getStringExtra("sorhName");
+//        Intent intent = getIntent();
+//        sorhName = intent.getStringExtra("sorhName");
+//        binding.tvSorhName.setText(sorhName);
+//        indexOfSorh = intent.getIntExtra("indexOfSorh");
+
+        Bundle extra = getIntent().getExtras();
+        sorhName = "سورة " + extra.getString("sorhName");
         binding.tvSorhName.setText(sorhName);
 
-        indexOfSorh = intent.getIntExtra("indexOfPosition",indexOfSorh);
-
+        indexOfSorh = extra.getInt("indexOfSorh");
+//        binding.tvSorhName.setText(Integer.toString(indexOfSorh));
         for(int i=0; i<QuranFragment.listOfSewarNames.length; i++){
             if( i == indexOfSorh){
                 fileName = i+1 + ".txt";
-                contentLines = getContent(fileName);
+                 text  = getContent(fileName);
             }
         }
 
-        adapter = new RecyclerViewAdapter((ArrayList<String>) contentLines);
+        adapter = new RecycleViewAdapterContent(text);
         layoutManager = new LinearLayoutManager(this);
 
-        binding.recyclerViewLines.setAdapter(adapter);
-        binding.recyclerViewLines.setLayoutManager(layoutManager);
+        binding.recyclerViewContent.setAdapter(adapter);
+        binding.recyclerViewContent.setLayoutManager(layoutManager);
 
     }
 
     private ArrayList<String> getContent(String fileName) {
 
+        ArrayList<String> contentLines = null;
+        InputStream inputStream, stream;
+        BufferedReader bufferedReader, reader;
+        int countLines = 0;
+
+        try {
+            stream = this.getAssets().open(fileName);
+            reader = new BufferedReader(new InputStreamReader(stream));
+            try {
+                while (reader.readLine() != null) {
+                    countLines++;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            inputStream = this.getAssets().open(fileName);
+            bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+
+            try {
+                contentLines = new ArrayList<>(countLines);
+                for (int i = 0; i < countLines; i++) {
+                    contentLines.add(bufferedReader.readLine());
+                }
+            } catch (Exception f) {
+                f.printStackTrace();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return contentLines;
+    }
+
+//        int cont = 0;
+//        ArrayList<String> text = null;
+//
+//        try {
+//
+//            InputStream inputStream = getAssets().open(fileName);
+//
+//            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+//
+//            while (reader.readLine() != null) {
+//
+//                text.add(reader.readLine());
+//                cont++;
+//
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } catch (Exception f) {
+//            f.printStackTrace();
+//        }
+//
+//        return text;
 
 //        try {
 //            InputStream inputStream = getAssets().open("myText.txt");
@@ -75,7 +136,7 @@ public class SorhPage extends AppCompatActivity {
 //            @Override
 //            public void onItemClick(int position, String[] lines) {
 //                try {
-//                    InputStream inputStream = getAssets().open("myText.txt");
+//                    InputStream inputStream = getAssets().open(".txt");
 //                    int size = inputStream.available();
 //                    byte[] buffer = new byte[size];
 //                    inputStream.read(buffer);
@@ -83,28 +144,9 @@ public class SorhPage extends AppCompatActivity {
 //                } catch (IOException e) {
 //                    e.printStackTrace();
 //                }
-//            }
+//            } catch (Exception f) {
+////            f.printStackTrace();
+////        }
 //        });
 
-        try {
-
-            InputStream inputStream = getAssets().open(fileName);
-
-            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-
-            int cont = 0;
-
-
-            while (reader.readLine() != null) {
-
-                contentLines.add(reader.readLine());
-                cont++;
-
-            }
-        }catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return contentLines;
-    }
 }
