@@ -47,31 +47,12 @@ public class QuranFragment extends Fragment {
             ,"التين","العَلَق","القدْر","البیّنة","الزَّلزّلة","العَاديَات","القارعَة","التكاثر","العَصر",
             "الهُمَزة","الفِیل","قريش","الماعُون","الكوثر","الكافِرون","النّصر","المسَد","الإخلاص","الفَلَق","الناس"};
 
-    String[] lines={};
-
-//    RecyclerViewAdapterConent recyclerViewAdapterConent;
-//
-//    List<contentModel> contentModels;
-//    List<contentModel> contentModelLines = new ArrayList<contentModel>();
-//    try ( BufferedReader bufferedReader = new BufferedReader(
-//            new InputStreamReader(getAssets().open("text1")))){
-//        String line = "";
-//        int i =0;
-//
-//        while ((line = bufferedReader.readLine()) != null){
-//            contentModel contentModel = new contentModel();
-//
-//        }
-//    }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_quran,container,false);
-        view = binding.getRoot();
-
 
         // RecyclerView set up
         adapter = new RecyclerViewAdapter(listOfSewarNames, RecyclerViewAdapter.LISTlist);
@@ -83,38 +64,21 @@ public class QuranFragment extends Fragment {
         //<./>
 
 
-        try {
-            InputStream inputStream = getContext().getAssets().open("myText.txt");
-            int size = inputStream.available();
-            byte[] buffer = new byte[size];
-            inputStream.read(buffer);
-            lines = new String[buffer.length];
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
         //go to item page
         adapter.setOnItemClickedListener(new RecyclerViewAdapter.OnItemClickedListener() {
             @Override
             public void onItemClick(int position, String[] ListModels) {
+                int indexOfPosition = position;
                 Intent intent = new Intent(getContext(), SorhPage.class);
                 intent.putExtra("sorhName", listOfSewarNames[position]);
-                intent.putExtra("lines",lines);
+                intent.putExtra("indexOfSorh", indexOfPosition);
                 startActivity(intent);
             }
         });
-
-//        adapter.setOnItemClickedListener(new RecyclerViewAdapterConent.OnItemClickedListener() {
-//            @Override
-//            public void onItemClick(int position, String[] lines) {
-//
-//            }
-//        });
-
         //</.>
 
 
+        view = binding.getRoot();
         return view;
     }
 }

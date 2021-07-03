@@ -15,38 +15,33 @@ import com.alamat.islami.databinding.ItemQuranListBinding;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.List;
+
+import static android.media.CamcorderProfile.get;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
     private String[] ListModels;
     int typeView;
+    ArrayList<String> contentLines;
 
-//    String[] contentModels ;
-
-    List<contentModel> contentModels;
-
+    // typeView vars
     public static final int LISTlist = 100;
     public static final int GIRDlist = 200;
     public static final int CONTENT = 300;
 
 
+    //constructors
     public RecyclerViewAdapter(String[] ListModel, int typeView) {
         this.ListModels = ListModel;
         this.typeView = typeView;
     }
 
-//
-//    public RecyclerViewAdapter(String[] contentModels) {
-//        this.contentModels = contentModels;
-//    }
-
-    public RecyclerViewAdapter(List<contentModel> contentModels) {
-        this.contentModels = contentModels;
+    public RecyclerViewAdapter(ArrayList<String> contentLines) {
+        this.contentLines = contentLines;
     }
 
+    // for interface
     OnItemClickedListener onItemClickedListener;
-
     public void setOnItemClickedListener(OnItemClickedListener onItemClickedListener) {
         this.onItemClickedListener = onItemClickedListener;
     }
@@ -85,8 +80,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull @NotNull ViewHolder holder, int position) {
 
-        String listModel = ListModels[position];
-        contentModel contactModel = contentModels.get(position);
+//        String listModel = ListModels[position];
+//        ArrayList<String> contentLines = contentLines.get(position);
 
         //Quran
         if (typeView == LISTlist) {
@@ -97,11 +92,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             holder.gridBinding.tvHadethName.setText(ListModels[position]);
         }
 
-        // ************* //Content **************
+        //Content
         else if(typeView == CONTENT){
-        holder.contentBinding.tvContent.setText(contactModel.line);
+        holder.contentBinding.tvContent.setText(contentLines.get(position));
     }
 
+
+        // for interface
         if (onItemClickedListener != null) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -110,12 +107,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 }
             });
         }
+
     }
 
     @Override
     public int getItemCount() {
 
         int countReturend =0;
+
         //return list count
         if (typeView == LISTlist || typeView == GIRDlist) {
             if (ListModels == null) {
@@ -129,11 +128,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         //return content count
         else if (typeView == CONTENT) {
 
-            if (contentModels == null) {
+            if (contentLines == null) {
                 countReturend= 0;
             } else {
 
-                countReturend= contentModels.size();
+                countReturend= contentLines.size();
             }
         }
 

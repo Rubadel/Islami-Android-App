@@ -21,30 +21,55 @@ import java.util.List;
 public class SorhPage extends AppCompatActivity {
 
     ActivitySorhPageBinding binding;
-    String sorhName;
-
 
     RecyclerViewAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
-    List lines;
+
+    String sorhName;
+    int indexOfSorh;
+    String fileName;
+    public ArrayList<String> contentLines;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sorh_page);
 
-        Intent i = getIntent();
-        // getIntent().getExtras().getString("sorhName");
-        sorhName = i.getStringExtra("sorhName");
+
+        Intent intent = getIntent();
+        sorhName = intent.getStringExtra("sorhName");
         binding.tvSorhName.setText(sorhName);
 
-        lines = Arrays.asList(i.getStringArrayExtra("lines"));
+        indexOfSorh = intent.getIntExtra("indexOfPosition",indexOfSorh);
 
-        adapter = new RecyclerViewAdapter(lines);
+        for(int i=0; i<QuranFragment.listOfSewarNames.length; i++){
+            if( i == indexOfSorh){
+                fileName = i+1 + ".txt";
+                contentLines = getContent(fileName);
+            }
+        }
+
+        adapter = new RecyclerViewAdapter((ArrayList<String>) contentLines);
         layoutManager = new LinearLayoutManager(this);
 
         binding.recyclerViewLines.setAdapter(adapter);
         binding.recyclerViewLines.setLayoutManager(layoutManager);
+
+    }
+
+    private ArrayList<String> getContent(String fileName) {
+
+
+//        try {
+//            InputStream inputStream = getAssets().open("myText.txt");
+//            int size = inputStream.available();
+//            byte[] buffer = new byte[size];
+//            inputStream.read(buffer);
+//            lines = new String[buffer.length];
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
 
 //        adapterConent.setOnItemClickedListener(new RecyclerViewAdapterConent.OnItemClickedListener() {
 //            @Override
@@ -61,5 +86,25 @@ public class SorhPage extends AppCompatActivity {
 //            }
 //        });
 
+        try {
+
+            InputStream inputStream = getAssets().open(fileName);
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+
+            int cont = 0;
+
+
+            while (reader.readLine() != null) {
+
+                contentLines.add(reader.readLine());
+                cont++;
+
+            }
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return contentLines;
     }
 }
