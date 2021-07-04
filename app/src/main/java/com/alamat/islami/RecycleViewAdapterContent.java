@@ -3,6 +3,7 @@ package com.alamat.islami;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
@@ -21,6 +22,7 @@ public class RecycleViewAdapterContent extends RecyclerView.Adapter<RecycleViewA
     public RecycleViewAdapterContent(ArrayList<String> contentLines) {
         this.contentLines = contentLines;
     }
+
 
     @NonNull
     @NotNull

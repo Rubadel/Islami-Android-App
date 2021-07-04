@@ -25,10 +25,8 @@ public class SorhPage extends AppCompatActivity {
     RecycleViewAdapterContent adapter;
     RecyclerView.LayoutManager layoutManager;
 
-    String sorhName;
+    String sorhName,fileName;
     int indexOfSorh;
-    String fileName;
-
     ArrayList<String> text ;
 
     @Override
@@ -71,7 +69,7 @@ public class SorhPage extends AppCompatActivity {
         int countLines = 0;
 
         try {
-            stream = this.getAssets().open(fileName);
+            stream = getAssets().open(fileName);
             reader = new BufferedReader(new InputStreamReader(stream));
             try {
                 while (reader.readLine() != null) {
@@ -81,7 +79,7 @@ public class SorhPage extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            inputStream = this.getAssets().open(fileName);
+            inputStream = getAssets().open(fileName);
             bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 
             try {
@@ -98,7 +96,7 @@ public class SorhPage extends AppCompatActivity {
         return contentLines;
     }
 
-//        int cont = 0;
+//        int countLines = 0;
 //        ArrayList<String> text = null;
 //
 //        try {
@@ -110,7 +108,7 @@ public class SorhPage extends AppCompatActivity {
 //            while (reader.readLine() != null) {
 //
 //                text.add(reader.readLine());
-//                cont++;
+//                countLines++;
 //
 //            }
 //        } catch (IOException e) {
