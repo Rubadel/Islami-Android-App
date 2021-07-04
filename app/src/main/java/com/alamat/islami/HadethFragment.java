@@ -1,9 +1,12 @@
 package com.alamat.islami;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -12,8 +15,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 
 import com.alamat.islami.databinding.FragmentHadethBinding;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.dialog.MaterialDialogs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -22,18 +28,18 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import static androidx.core.os.LocaleListCompat.create;
+
 public class HadethFragment extends Fragment {
 
     FragmentHadethBinding binding;
     View view;
 
-    //for RecyclerView
     RecyclerViewAdapterList adapter;
     RecyclerView.LayoutManager layoutManager;
 
-    ArrayList<String> contentLines, singleHadeth;
+    ArrayList<String> contentLines;
 
-    String lines;
 
     public static String[] listOfAhadethNames = {"الحديث الأول","الحديث الثاني","الحديث الـثـالـث","الحديث الـرابع","الحديث الخامس","الحديث السادس","الحديث السابع","الحديث الثامن","الحديث التاسع","الحديث العاشر",
             "الحديث الحادي عشر","الحديث الثانى عشر","الحديث الثالث عشر","الحد يث الرابع عشر","الحديث الخامس عشر","الحديث السادس عشر","الحديث السابع عشر","الحد يث الثامن عشر","الحد يث التاسع عشر","الحديث العشرون",
@@ -48,6 +54,7 @@ public class HadethFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_hadeth,container,false);
 
+
         //for RecyclerView
         adapter = new RecyclerViewAdapterList(listOfAhadethNames, RecyclerViewAdapterList.GIRDlist );
         layoutManager = new GridLayoutManager(getContext(),2);
@@ -57,46 +64,59 @@ public class HadethFragment extends Fragment {
 
         //<./>
 
-        //go to item page
+
+        //get content hadeths file
+        contentLines = getContent("ahadeth.txt");
+        //<./>
+
+        //go to item content
         adapter.setOnItemClickedListener(new RecyclerViewAdapterList.OnItemClickedListener() {
             @Override
             public void onItemClick(int position, String ListModels) {
-
-                contentLines = getContent("ahadeth.txt");
-                openDialog();
+                opendialog(listOfAhadethNames[position],contentLines.get(position));
             }
         });
         //<./>
+
 
         view = binding.getRoot();
         return view;
     }
 
+
+    //reade single hadeth
     private ArrayList<String> getContent(String fileName) {
 
+        ArrayList<String> singleHadeth =null;
         InputStream stream;
         BufferedReader reader;
-        int countLinesOfText = 0;
+
+        int countLines = 0;
+        ArrayList<String> hadethcontent = new ArrayList<>(countLines);
+        String readerLines,lines;
+
 
         try {
             stream = getContext().getAssets().open(fileName);
             reader = new BufferedReader(new InputStreamReader(stream));
 
-
             try {
-                for(String l = reader.readLine(); l != null; l=l+1)
-                while (l != null) {
-                    lines = l;
-                    if (l.equals("#")) {
+                while ( (readerLines = reader.readLine()) != null) {
+                     lines = readerLines;
+
+                    while ((readerLines = reader.readLine()) != null) {
+
+                        //detect the limit line with # symbol
+                        String limit = (readerLines.trim());
+                        //then cut the content
+                        if("#".equals(limit)){
                             break;
-                        }
-
-                        lines = lines + "\n" + l;
-                    singleHadeth.add(lines);
-
+                         }
+                        lines = lines + " \n " + readerLines;
+                    }
+                    hadethcontent.add(lines);
                 }
-                singleHadeth = singleHadeth;
-
+                singleHadeth = hadethcontent;
 
             } catch (Exception f) {
                 f.printStackTrace();
@@ -107,11 +127,17 @@ public class HadethFragment extends Fragment {
 
         return singleHadeth;
     }
+    // <./>
 
-
-    private void openDialog(){
-        Dialog dialog = new Dialog(getContext());
-        dialog.setContentView(R.layout.activity_hadeth_page);
-        dialog.show();
+    //Dialog
+    public void opendialog(String name, String content) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.MyDialogTheme);
+        builder.setMessage(content);
+        builder.setPositiveButton(
+                R.string.back, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }).show();
     }
 }

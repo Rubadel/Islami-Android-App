@@ -55,4 +55,8 @@ public class RecycleViewAdapterContent extends RecyclerView.Adapter<RecycleViewA
         }
     }
 
+    public interface onItemClickListener {
+        void onItemClick(int position, String content);
+    }
+
 }

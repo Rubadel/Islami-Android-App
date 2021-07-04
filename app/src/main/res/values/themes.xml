@@ -13,4 +13,9 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@drawable/arabic_floral_frame_traditional_islamic_design_stock_vector_royalty_free_698125858_removebg_preview</item>
+    </style>
+
 </resources>

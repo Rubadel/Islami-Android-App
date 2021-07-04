@@ -22,7 +22,6 @@ public class RecyclerViewAdapterList extends RecyclerView.Adapter<RecyclerViewAd
     String[] ListModels;
     int typeView;
 
-    ArrayList<String> contentLines;
 
     // typeView vars
     public static final int LISTlist = 100;
@@ -53,9 +52,10 @@ public class RecyclerViewAdapterList extends RecyclerView.Adapter<RecyclerViewAd
 //        return contentLines;
 //    }
 
-    // for interface
-    OnItemClickedListener onItemClickedListener;
 
+    // interfaces
+
+    OnItemClickedListener onItemClickedListener;
     public void setOnItemClickedListener(OnItemClickedListener onItemClickedListener) {
         this.onItemClickedListener = onItemClickedListener;
     }
@@ -103,6 +103,15 @@ public class RecyclerViewAdapterList extends RecyclerView.Adapter<RecyclerViewAd
             //Hadeth
         } else if (typeView == GIRDlist) {
             holder.gridBinding.tvHadethName.setText(ListModels[position]);
+
+            if (onItemClickedListener != null){
+                holder.gridBinding.tvHadethName.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        onItemClickedListener.onItemClick(position, ListModels[position]);
+                    }
+                });
+            }
         }
 
         //Content
@@ -119,6 +128,15 @@ public class RecyclerViewAdapterList extends RecyclerView.Adapter<RecyclerViewAd
             }
         });
     }
+
+//        if (onItemClickedListener != null){
+//            holder.gridBinding.tvHadethName.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    onItemClickedListener.onItemClick(position, ListModels[position]);
+//                }
+//            });
+//        }
 }
 
 
@@ -185,5 +203,8 @@ public class RecyclerViewAdapterList extends RecyclerView.Adapter<RecyclerViewAd
     public interface OnItemClickedListener {
         void onItemClick(int position, String ListModels);
     }
-}
 
+    public interface onHadethClickListener {
+        void onhadethClick(int position, String name);
+    }
+}
