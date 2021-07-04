@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@drawable/arabic_floral_frame_traditional_islamic_design_stock_vector_royalty_free_698125858_removebg_preview">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
