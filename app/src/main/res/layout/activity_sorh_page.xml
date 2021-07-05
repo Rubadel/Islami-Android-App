@@ -10,9 +10,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/frame_f_removebg_preview"
+        android:background="@drawable/backt_jpg_removebg_preview"
         tools:context=".SorhPage">
-        <include layout="@layout/action_bar"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_sorh_Name"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="26dp"/>
 
         <TextView
             android:id="@+id/tv_sorh_Name"
@@ -34,8 +42,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_content"
-            android:layout_width="201dp"
-            android:layout_height="395dp"
+            android:layout_width="242dp"
+            android:layout_height="398dp"
             android:layout_marginStart="66dp"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="66dp"
@@ -43,10 +51,10 @@
             android:outlineSpotShadowColor="@color/dark_blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintHorizontal_bias="0.486"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_sorh_Name"
-            app:layout_constraintVertical_bias="0.11" />
+            app:layout_constraintVertical_bias="0.203" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

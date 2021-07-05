@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     style="?android:attr/spinnerItemStyle"
     android:textSize="18sp"
+    android:background=""
     android:textColor="@color/silvwhite"
     android:padding="2dp">
 
