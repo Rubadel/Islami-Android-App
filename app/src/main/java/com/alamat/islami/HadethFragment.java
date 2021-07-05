@@ -133,11 +133,6 @@ public class HadethFragment extends Fragment {
     public void opendialog(String name, String content) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.MyDialogTheme);
         builder.setMessage(content);
-        builder.setPositiveButton(
-                R.string.back, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                }).show();
+       builder.show();
     }
 }

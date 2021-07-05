@@ -7,12 +7,18 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="OliveGreen">#556B2F</color>
-    <color name="DarkGray">#A9A9A9</color>
-    <color name="DarkSeaGreen">#8FBC8F</color>
+    <color name="lightkGray">#A9A9A9</color>
+    <color name="DarkGray">#616260</color>
+
+    <color name="SeaGreen">#8da384</color>
     <color name="silvwhite">#f0f0f1</color>
     <color name="bkGreen">#e9fbcb</color>
     <color name="darkgreen">#445340</color>
+    <color name="lightgreen">#788d6e</color>
+    <color name="extralightgreen">#94ac94</color>
+    <color name="oliveg">#aeb470</color>
+    <color name="babyBrown">#ad9a72</color>
+    <color name="oranBrow">#c28e62</color>
 
 
     <color name="white_cream">#f7fcff</color>

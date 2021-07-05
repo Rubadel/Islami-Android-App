@@ -12,102 +12,79 @@
         android:layout_height="match_parent"
         tools:context=".SebhaFragment">
 
-        <include layout="@layout/action_bar"/>
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/light_cyan">
+            android:background="@color/babyBrown">
 
-            <ImageView
-                android:id="@+id/iv_total"
-                android:layout_width="195dp"
-                android:layout_height="174dp"
-                android:layout_marginTop="28dp"
-                android:src="@drawable/circle_jpg_removebg_preview"
+            <include layout="@layout/action_bar"/>
+
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="144dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="144dp"
+                android:background="@drawable/background_text"
+                android:gravity="center"
+                android:text="total"
+                android:textColor="@color/silvwhite"
+                android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_total"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@+id/iv_total"
-                app:layout_constraintEnd_toEndOf="@+id/iv_total"
-                app:layout_constraintTop_toTopOf="@+id/iv_total"
-                app:layout_constraintBottom_toBottomOf="@+id/iv_total"
-                android:gravity="center"
-                android:text="total"
-                android:textSize="40sp"
-                android:textColor="@color/light_golden"
-                android:textColorHighlight="@color/dark_blue"/>
-
-            <ImageView
-                android:id="@+id/iv_single"
-                android:layout_width="115dp"
-                android:layout_height="124dp"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/circle_jpg_removebg_preview"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/iv_total"/>
-
-
-            <TextView
                 android:id="@+id/tv_single"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="102dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="68dp"
+                android:background="@drawable/background_text"
                 android:gravity="center"
                 android:text="single"
-                android:textColor="@color/light_golden"
-                android:textColorHighlight="@color/dark_blue"
+                android:textColor="@color/silvwhite"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@+id/iv_single"
-                app:layout_constraintEnd_toEndOf="@+id/iv_single"
-                app:layout_constraintStart_toStartOf="@+id/iv_single"
-                app:layout_constraintTop_toTopOf="@+id/iv_single"
-                app:layout_constraintVertical_bias="0.536" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total" />
 
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="284dp"
                 android:gravity="center"
                 android:spinnerMode="dropdown"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/iv_single"
-                app:layout_constraintVertical_bias="0.129" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_single"
+                app:layout_constraintVertical_bias="1.0" />
 
             <ImageView
                 android:id="@+id/btn_reset"
                 android:layout_width="31dp"
                 android:layout_height="36dp"
-                android:layout_marginStart="200dp"
-                android:layout_marginTop="105dp"
-                android:layout_marginBottom="100dp"
                 android:src="@drawable/ic_rotate"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/btnCounter"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.255"
+                app:layout_constraintHorizontal_bias="0.673"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iv_single"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toBottomOf="@+id/spinner"
+                app:layout_constraintVertical_bias="0.348" />
 
             <ImageView
                 android:id="@+id/btnCounter"
                 android:layout_width="59dp"
                 android:layout_height="59dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="32dp"
                 android:src="@drawable/ic_button"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.508"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btn_reset" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>

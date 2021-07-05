@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/quran_frame"
+        android:background="@drawable/frame_f_removebg_preview"
         tools:context=".SorhPage">
         <include layout="@layout/action_bar"/>
 
@@ -30,12 +30,12 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.157" />
+            app:layout_constraintVertical_bias="0.116" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_content"
-            android:layout_width="273dp"
-            android:layout_height="428dp"
+            android:layout_width="201dp"
+            android:layout_height="395dp"
             android:layout_marginStart="66dp"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="66dp"
@@ -43,10 +43,10 @@
             android:outlineSpotShadowColor="@color/dark_blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.571"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_sorh_Name"
-            app:layout_constraintVertical_bias="0.578" />
+            app:layout_constraintVertical_bias="0.11" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

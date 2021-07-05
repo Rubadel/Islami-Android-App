@@ -15,9 +15,8 @@
         <ImageView
             android:id="@+id/iv_quran_labeled"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/quran_label"
+            android:layout_height="70dp"
+            android:background="@drawable/___________ok_ru_removebg_preview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -26,17 +25,17 @@
             android:id="@+id/tv_sorh_Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="9dp"
             android:text="سورة "
-            android:textColor="@color/dark_golden"
-            android:textSize="20sp"
+            android:textColor="@color/light_golden"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@+id/iv_quran_labeled"
             app:layout_constraintEnd_toEndOf="@+id/iv_quran_labeled"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="@+id/iv_quran_labeled"
             app:layout_constraintTop_toTopOf="@+id/iv_quran_labeled"
-            app:layout_constraintVertical_bias="0.681" />
+            app:layout_constraintVertical_bias="0.551" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
