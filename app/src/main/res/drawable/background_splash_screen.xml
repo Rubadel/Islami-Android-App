@@ -4,7 +4,7 @@
     <item android:drawable="@color/dark_blue"/>
 
     <item>
-        <bitmap android:src="@drawable/program_frame"
+        <bitmap android:src="@drawable/teal_green_blue_mandala_right_side_1_of_2_poster_by_agnes_szafranska"
             android:gravity="center"/>
     </item>
 </layer-list>

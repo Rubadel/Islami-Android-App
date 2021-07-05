@@ -22,7 +22,7 @@
     </style>
 
     <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/logo</item>
+        <item name="android:windowBackground">@drawable/ayasofia_istanbul_turkey_removebg_preview</item>
     </style>
 
 </resources>

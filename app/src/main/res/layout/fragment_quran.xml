@@ -10,17 +10,17 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background_color"
+        android:background="@drawable/pale_green_silk_chiffon_fabric_by_the_yard"
         tools:context=".QuranFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
-            android:layout_width="421dp"
-            android:layout_height="669dp"
+            android:layout_width="match_parent"
+            android:layout_height="663dp"
             android:layout_marginTop="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
     </FrameLayout>
 </layout>
