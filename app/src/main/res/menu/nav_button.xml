@@ -3,18 +3,22 @@
 
     <item
         android:id="@+id/quran_btn_nav"
+        android:icon="@drawable/ic_quran_icon"
         android:title="@string/quran_label" />
 
     <item
         android:id="@+id/hadeth_btn_nav"
+        android:icon="@drawable/hadeth1_removebg_preview"
         android:title="@string/hadeth_label"/>
 
     <item
         android:id="@+id/sebha_btn_nav"
+        android:icon="@drawable/sebha1_removebg_preview_removebg_preview"
         android:title="@string/sebha_label"/>
 
     <item
         android:id="@+id/radio_btn_nav"
+        android:icon="@drawable/ic_quran_icon"
         android:title="@string/radio_label"/>
 
 </menu>

@@ -8,7 +8,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="190dp"
-        android:background="@drawable/arabic_floral_frame_traditional_islamic_design_stock_vector_royalty_free_698125858_removebg_preview">
-
+        android:background="@drawable/hadeth_frame">
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -14,8 +14,15 @@
         <!-- Customize your theme here. -->
     </style>
 
+
     <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
-        <item name="android:background">@drawable/arabic_floral_frame_traditional_islamic_design_stock_vector_royalty_free_698125858_removebg_preview</item>
+        <item name="android:background">@drawable/quran_label</item>
+        <item name="android:textColor">@color/sub_golden</item>
+        <item name="fontFamily"></item>
+    </style>
+
+    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash_screen</item>
     </style>
 
 </resources>

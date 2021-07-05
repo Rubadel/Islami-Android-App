@@ -25,9 +25,10 @@
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/nav_bar"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@color/darkgreen"
-            app:itemTextColor="@color/bkGreen"
+            android:layout_height="30dp"
+            android:background="@color/dark_blue"
+            app:itemTextColor="@color/dark_golden"
+            app:itemIconTint="@color/dark_golden"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fram_layout"

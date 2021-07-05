@@ -29,8 +29,8 @@ public class SebhaFragment extends Fragment implements AdapterView.OnItemSelecte
         view = binding.getRoot();
 
         //for spinner
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.athkar, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.athkar, R.layout.spinner_selected_item);
+        adapter.setDropDownViewResource(R.layout.spinner_drop_down);
         binding.spinner.setAdapter(adapter);
         binding.spinner.setOnItemSelectedListener(this);
         //</.>
@@ -68,7 +68,7 @@ public class SebhaFragment extends Fragment implements AdapterView.OnItemSelecte
     {
         //to reset count with each calling
         singelCount = 0;
-        binding.tvSingelCount.setText(Integer.toString(singelCount));
+        binding.tvSingle.setText(Integer.toString(singelCount));
 
         //counter with pressed btn
         binding.btnCounter.setOnClickListener(new View.OnClickListener() {
@@ -76,8 +76,8 @@ public class SebhaFragment extends Fragment implements AdapterView.OnItemSelecte
             public void onClick(View v) {
                 singelCount = singelCount+1;
                 totalCount = totalCount+1;
-                binding.tvSingelCount.setText(Integer.toString(singelCount)); //single counter
-                binding.tvTotalCount.setText(Integer.toString(totalCount)); //total counter
+                binding.tvSingle.setText(Integer.toString(singelCount)); //single counter
+                binding.tvTotal.setText(Integer.toString(totalCount)); //total counter
             }
         });
     }
@@ -87,7 +87,7 @@ public class SebhaFragment extends Fragment implements AdapterView.OnItemSelecte
             @Override
             public void onClick(View v) {
                 totalCount = 0;
-                binding.tvTotalCount.setText(Integer.toString(totalCount));
+                binding.tvTotal.setText(Integer.toString(totalCount));
             }
         });
     }

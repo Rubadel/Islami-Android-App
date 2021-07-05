@@ -9,11 +9,21 @@
     <color name="white">#FFFFFFFF</color>
     <color name="OliveGreen">#556B2F</color>
     <color name="DarkGray">#A9A9A9</color>
-    <color name="lightCyan">#E0FFFF</color>
-    <color name="mintCream">#F5FFFA</color>
     <color name="DarkSeaGreen">#8FBC8F</color>
     <color name="silvwhite">#f0f0f1</color>
     <color name="bkGreen">#e9fbcb</color>
     <color name="darkgreen">#445340</color>
+
+
+    <color name="white_cream">#f7fcff</color>
+    <color name="mint_cream">#F5FFFA</color>
+    <color name="dark_blue">#1d2355</color>
+    <color name="light_golden">#d8b561</color>
+    <color name="sub_golden">#dda44d</color>
+    <color name="dark_golden">#c29339</color>
+    <color name="subenabi">#802a2b</color>
+    <color name="light_cyan">#e2f7ff</color>
+
+
 
 </resources>
