@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.alamat.islami.databinding.ActivitySorhPageBinding;
 
@@ -147,4 +148,8 @@ public class SorhPage extends AppCompatActivity {
 ////        }
 //        });
 
+    public void returnBack(View v){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }

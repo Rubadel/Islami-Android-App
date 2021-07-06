@@ -27,11 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-
         binding.navBar.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fram_layout, new QuranFragment()).commit();

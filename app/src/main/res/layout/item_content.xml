@@ -18,7 +18,7 @@
             android:gravity="center"
             android:padding="15dp"
             android:text="TEST"
-            android:textColor="@color/DarkGray"
+            android:textColor="@color/darkgreen"
             android:textSize="23sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

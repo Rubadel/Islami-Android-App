@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/pale_green_silk_chiffon_fabric_by_the_yard"
+        android:background="@color/tevani"
         tools:context=".HadethFragment">
 
         <androidx.recyclerview.widget.RecyclerView

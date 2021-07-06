@@ -8,10 +8,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashScreen extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(@Nullable Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
-
         startActivity(new Intent(this,MainActivity.class));
     }
 }

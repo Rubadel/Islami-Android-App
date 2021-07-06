@@ -132,6 +132,7 @@ public class HadethFragment extends Fragment {
     //Dialog
     public void opendialog(String name, String content) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.MyDialogTheme);
+        builder.setTitle(name);
         builder.setMessage(content);
        builder.show();
     }

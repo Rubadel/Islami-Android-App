@@ -10,13 +10,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white_cream">
+        android:backgroundTint="@color/tevani">
 
         <ImageView
             android:id="@+id/iv_quran_labeled"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:background="@drawable/label_jpg"
+            android:background="@drawable/label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -28,7 +28,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="9dp"
             android:text="سورة "
-            android:textColor="@color/light_golden"
+            android:textColor="@color/tevani"
             android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="@+id/iv_quran_labeled"
             app:layout_constraintEnd_toEndOf="@+id/iv_quran_labeled"

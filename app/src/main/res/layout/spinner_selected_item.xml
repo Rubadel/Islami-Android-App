@@ -4,10 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="?android:attr/spinnerItemStyle"
-    android:textSize="18sp"
-    android:background="@color/bkGreen"
-    android:textColor="@color/silvwhite"
-    android:padding="2dp">
-
+    android:padding="3dp"
+    android:textColor="@color/baby_green"
+    android:textSize="23sp">
 </TextView>

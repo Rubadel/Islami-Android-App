@@ -26,9 +26,15 @@
     <color name="dark_blue">#1d2355</color>
     <color name="light_golden">#d8b561</color>
     <color name="sub_golden">#dda44d</color>
-    <color name="dark_golden">#c29339</color>
     <color name="subenabi">#802a2b</color>
     <color name="light_cyan">#e2f7ff</color>
+
+
+    <color name="gray_blue">#36465f</color>
+    <color name="golden">#c79223</color>
+    <color name="baby_green">#bac7ba</color>
+    <color name="mint_white">#e7ebdf</color>
+    <color name="tevani">#95b3a7</color>
 
 
 
