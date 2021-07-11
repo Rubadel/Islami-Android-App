@@ -191,6 +191,10 @@ public class RecyclerViewAdapterList extends RecyclerView.Adapter<RecyclerViewAd
             this.gridBinding = gridBinding;
         }
 
+
+
+
+
 //        content
 //        public ViewHolder(ItemContentBinding contentBinding) {
 //            super(contentBinding.getRoot());
@@ -204,7 +208,4 @@ public class RecyclerViewAdapterList extends RecyclerView.Adapter<RecyclerViewAd
         void onItemClick(int position, String ListModels);
     }
 
-    public interface onHadethClickListener {
-        void onhadethClick(int position, String name);
-    }
 }

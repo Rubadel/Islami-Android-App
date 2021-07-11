@@ -16,14 +16,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class SorhPage extends AppCompatActivity {
 
     ActivitySorhPageBinding binding;
 
-    RecycleViewAdapterContent adapter;
+    RecyclerViewAdapterContent adapter;
     RecyclerView.LayoutManager layoutManager;
 
     String sorhName,fileName;
@@ -54,7 +52,7 @@ public class SorhPage extends AppCompatActivity {
             }
         }
 
-        adapter = new RecycleViewAdapterContent(text);
+        adapter = new RecyclerViewAdapterContent(text);
         layoutManager = new LinearLayoutManager(this);
 
         binding.recyclerViewContent.setAdapter(adapter);

@@ -6,10 +6,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.WindowManager;
 
 import com.alamat.islami.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -55,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.sebha_btn_nav:
-                    fragment = new SebhaFragment();
+                    fragment = new AthkarFragment();
                     break;
 
                 case R.id.radio_btn_nav:

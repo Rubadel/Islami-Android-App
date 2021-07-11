@@ -1,9 +1,7 @@
 package com.alamat.islami;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
@@ -15,11 +13,11 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-public class RecycleViewAdapterContent extends RecyclerView.Adapter<RecycleViewAdapterContent.ViewHolder>  {
+public class RecyclerViewAdapterContent extends RecyclerView.Adapter<RecyclerViewAdapterContent.ViewHolder>  {
 
     ArrayList<String> contentLines;
 
-    public RecycleViewAdapterContent(ArrayList<String> contentLines) {
+    public RecyclerViewAdapterContent(ArrayList<String> contentLines) {
         this.contentLines = contentLines;
     }
 

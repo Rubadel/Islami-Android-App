@@ -1,64 +1,124 @@
 package com.alamat.islami;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.PagerSnapHelper;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SnapHelper;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link RadioFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.alamat.islami.apiRadio.APImodels.RadioItem;
+import com.alamat.islami.apiRadio.APImodels.RadioResponseModel;
+import com.alamat.islami.apiRadio.Newtwork.apiManager;
+import com.alamat.islami.databinding.FragmentRadioBinding;
+
+import java.io.IOException;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+
 public class RadioFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    FragmentRadioBinding binding;
+    View view;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    RecyclerViewAdapterRadio adapter;
+    RecyclerView.LayoutManager layoutManager;
 
-    public RadioFragment() {
-        // Required empty public constructor
-    }
+    SnapHelper snapHelper;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment RadioFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static RadioFragment newInstance(String param1, String param2) {
-        RadioFragment fragment = new RadioFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    MediaPlayer mediaPlayer;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_radio, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_radio,container,false);
+
+        adapter = new RecyclerViewAdapterRadio(null);
+        layoutManager = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
+        binding.recyclerView.setAdapter(adapter);
+        binding.recyclerView.setLayoutManager(layoutManager);
+
+        callRadios();
+
+        snapHelper = new PagerSnapHelper();
+        snapHelper.attachToRecyclerView(binding.recyclerView);
+
+        adapter.setOnPlatClickListener(new RecyclerViewAdapterRadio.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position, RadioItem radioItem) {
+                //play radio
+                playRadio(radioItem.getURL());
+
+            }
+        });
+
+        adapter.setOnStopClickListener(new RecyclerViewAdapterRadio.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position, RadioItem radioItem) {
+                //stop radio
+                stopRadio();
+
+            }
+        });
+
+
+        view = binding.getRoot();
+        return view;
     }
+
+    public void callRadios() {
+        apiManager.getAPIS().getRadio().enqueue(new Callback<RadioResponseModel>() {
+            @Override
+            public void onResponse(Call<RadioResponseModel> call, Response<RadioResponseModel> response) {
+
+                    adapter.changeData(response.body().getRadios());
+            }
+
+            @Override
+            public void onFailure(Call<RadioResponseModel> call, Throwable t) {
+
+                Log.e("TAG", "onFailure: " + t.getLocalizedMessage());
+
+            }
+        });
+    }
+
+    public void stopRadio(){
+        if(mediaPlayer != null){
+            mediaPlayer.stop();
+        }
+    }
+
+    public void playRadio(String URL){
+        stopRadio();
+        mediaPlayer = new MediaPlayer();
+
+        try {
+            mediaPlayer.setDataSource(URL);
+            mediaPlayer.prepareAsync();
+
+            mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                @Override
+                public void onPrepared(MediaPlayer mp) {
+                    mp.start();
+                }
+            });
+        }catch (IOException e){
+            Toast.makeText(getContext(),"The ERROR is " + e.fillInStackTrace() , Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }

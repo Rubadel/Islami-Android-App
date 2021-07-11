@@ -2,14 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.alamat.islami">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Islami">
-        <activity android:name=".SebhaFragment"></activity>
+        android:theme="@style/Theme.Islami"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".nightAthkar"></activity>
+        <activity android:name=".morningAthkar" />
+        <activity android:name=".AthkarFragment" />
         <activity
             android:name=".SplashScreen"
             android:theme="@style/SplashScreen">
