@@ -16,16 +16,18 @@
             android:layout_width="match_parent"
             android:layout_height="192dp"
             android:layout_gravity="center"
-            android:layout_marginTop="250dp"
-            android:outlineAmbientShadowColor="@color/dark_blue"
-            android:outlineSpotShadowColor="@color/black"
-            app:cardBackgroundColor="@color/tevani"
-            app:cardCornerRadius="5dp"
+            android:layout_marginTop="198dp"
+            android:backgroundTint="@color/extra_light_purple"
+            android:clipToPadding="true"
+            android:outlineProvider="background"
             app:cardUseCompatPadding="true"
+            app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/tv_radio_name"
@@ -34,29 +36,28 @@
                 android:layout_marginTop="50dp"
                 android:text="اسم الاذاعة"
                 android:textAlignment="center"
-                android:textColor="@color/darkgreen"
-                android:textColorHighlight="@color/white_cream"
+                android:textColor="@color/dark_blue"
                 android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <ImageView
                 android:id="@+id/btn_play"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:layout_marginTop="130dp"
                 android:layout_marginEnd="160dp"
-                android:src="@drawable/ic_play_icon"/>
+                android:src="@drawable/ic_play_icon" />
 
             <ImageView
                 android:id="@+id/btn_stop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
+                android:layout_gravity="start"
                 android:layout_marginStart="160dp"
                 android:layout_marginTop="130dp"
                 android:src="@drawable/ic_stop_icon" />

@@ -9,14 +9,15 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/baby_green"
-        tools:context=".RadioFragment">
+        android:background="@color/extra_light_purple"
+        tools:context=".main_nav_fragments.RadioFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="754dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="55dp" />
+            android:layout_marginBottom="55dp"
+            android:background="@drawable/bckg_removebg" />
     </FrameLayout>
 </layout>

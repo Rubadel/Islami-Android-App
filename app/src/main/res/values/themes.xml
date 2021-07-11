@@ -3,11 +3,11 @@
     <style name="Theme.Islami" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/baby_green</item>
-        <item name="colorPrimaryVariant">@color/tevani</item>
-        <item name="colorOnPrimary">@color/tevani</item>
+        <item name="colorPrimaryVariant">@color/baby_purplr</item>
+        <item name="colorOnPrimary">@color/baby_purplr</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorSecondary">@color/baby_purplr</item>
+        <item name="colorSecondaryVariant">@color/baby_purplr</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
@@ -16,14 +16,18 @@
 
 
     <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
-        <item name="android:background">@color/tevani</item>
-        <item name="android:textColor">@color/baby_green</item>
+        <item name="android:background">@color/extra_light_purple</item>
+        <item name="android:textColor">@color/dark_purple</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textDirection">rtl</item>
+        <item name="android:layoutDirection">rtl</item>
+        <item name="android:endColor">@color/extra_light_purple</item>
         <item name="fontFamily"></item>
     </style>
 
     <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/app_logo</item>
-        <item name="backgroundInsetTop">@color/bkGreen</item>
+        <item name="android:windowBackground">@drawable/m_y_s_t_i_c__y_o_u_t_h</item>
+        <item name="backgroundInsetTop">@color/baby_purplr</item>
     </style>
 
 </resources>

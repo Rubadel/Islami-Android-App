@@ -13,31 +13,28 @@
 
         <ImageView
             android:id="@+id/iv_hadeth_labeled"
-            android:layout_width="99dp"
-            android:layout_height="77dp"
-            android:layout_margin="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="1dp"
-            android:background="@drawable/label"
+            android:layout_width="wrap_content"
+            android:layout_height="135dp"
+            android:background="@drawable/hadeth_label"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.013"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/tv_hadethName"
-            android:layout_width="84dp"
-            android:layout_height="62dp"
+            android:layout_width="45dp"
+            android:layout_height="48dp"
             android:autoSizeTextType="uniform"
             android:gravity="center"
             android:text="الحديث السابع عشر "
-            android:textColor="@color/tevani"
+            android:textColor="@color/dark_purple"
             app:layout_constraintBottom_toBottomOf="@+id/iv_hadeth_labeled"
             app:layout_constraintEnd_toEndOf="@+id/iv_hadeth_labeled"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.525"
             app:layout_constraintStart_toStartOf="@+id/iv_hadeth_labeled"
-            app:layout_constraintTop_toTopOf="@+id/iv_hadeth_labeled"
-            app:layout_constraintVertical_bias="0.473" />
+            app:layout_constraintTop_toTopOf="@+id/iv_hadeth_labeled" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

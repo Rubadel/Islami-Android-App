@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
-        <shape android:shape="oval">
+        <shape android:shape="rectangle">
             <gradient
-                android:centerColor="@color/baby_green"
-                android:centerX="20%"
-                android:endColor="@color/silvwhite"
-                android:startColor="@color/silvwhite"/>
-            <corners android:radius="160dp"></corners>
+                android:centerColor="@color/extra_light_purple"
+                android:centerX="50%"
+                android:endColor="@color/extra_light_purple"
+                android:startColor="@color/extra_light_purple"/>
+            <corners android:radius="30dp"></corners>
 
         </shape>
     </item>

@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="3dp"
-    android:textColor="@color/baby_green"
+    android:layoutDirection="rtl"
+    android:textColor="@color/black"
+    android:textDirection="rtl"
     android:textSize="23sp">
 </TextView>

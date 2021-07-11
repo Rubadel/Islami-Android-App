@@ -12,9 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Islami"
         android:usesCleartextTraffic="true">
-        <activity android:name=".nightAthkar"></activity>
-        <activity android:name=".morningAthkar" />
-        <activity android:name=".AthkarFragment" />
+        <activity android:name=".pages.nightAthkar"></activity>
+        <activity android:name=".pages.morningAthkar" />
+        <activity android:name=".main_nav_fragments.AthkarFragment" />
         <activity
             android:name=".SplashScreen"
             android:theme="@style/SplashScreen">
@@ -27,7 +27,7 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.Islami" />
-        <activity android:name=".SorhPage" />
+        <activity android:name=".pages.SorhPage" />
     </application>
 
 </manifest>

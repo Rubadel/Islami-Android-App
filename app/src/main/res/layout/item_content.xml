@@ -18,11 +18,13 @@
             android:gravity="center"
             android:padding="15dp"
             android:text="TEST"
-            android:textColor="@color/darkgreen"
+            android:layoutDirection="rtl"
             android:textSize="23sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:textColor="#200F23"
+            android:textDirection="rtl"
             app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

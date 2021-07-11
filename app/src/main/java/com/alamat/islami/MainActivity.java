@@ -9,6 +9,11 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.alamat.islami.databinding.ActivityMainBinding;
+import com.alamat.islami.main_nav_fragments.AthkarFragment;
+import com.alamat.islami.main_nav_fragments.HadethFragment;
+import com.alamat.islami.main_nav_fragments.QuranFragment;
+import com.alamat.islami.main_nav_fragments.RadioFragment;
+import com.alamat.islami.main_nav_fragments.SebhaFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -52,11 +57,14 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.sebha_btn_nav:
-                    fragment = new AthkarFragment();
+                    fragment = new SebhaFragment();
                     break;
 
                 case R.id.radio_btn_nav:
                     fragment = new RadioFragment();
+                    break;
+                case R.id.athkar_btn_nav:
+                    fragment = new AthkarFragment();
                     break;
             }
 
