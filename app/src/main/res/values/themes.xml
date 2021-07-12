@@ -26,7 +26,7 @@
     </style>
 
     <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/m_y_s_t_i_c__y_o_u_t_h</item>
+        <item name="android:windowBackground">@drawable/slash_pic</item>
         <item name="backgroundInsetTop">@color/baby_purplr</item>
     </style>
 
