@@ -17,7 +17,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/athkar_icon">
+            android:background="@drawable/athkar_icon"
+            android:backgroundTint="@color/purple_white">
 
 
             <TextView
@@ -53,7 +54,7 @@
                 android:id="@+id/spinner"
                 android:layout_width="189dp"
                 android:layout_height="35dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="40dp"
                 android:gravity="center"
                 android:layoutDirection="rtl"
                 android:spinnerMode="dropdown"

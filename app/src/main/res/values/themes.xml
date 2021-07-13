@@ -21,7 +21,7 @@
         <item name="android:textSize">20sp</item>
         <item name="android:textDirection">rtl</item>
         <item name="android:layoutDirection">rtl</item>
-        <item name="android:endColor">@color/extra_light_purple</item>
+        <item name="android:endColor">@color/dark_purple</item>
         <item name="fontFamily"></item>
     </style>
 

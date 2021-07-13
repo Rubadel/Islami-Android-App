@@ -58,6 +58,12 @@ public class SebhaFragment extends Fragment implements AdapterView.OnItemSelecte
             case 2:
                 singelCounter();
                 break;
+            case 3:
+                singelCounter();
+                break;
+            case 4:
+                singelCounter();
+                break;
         }
     }
 

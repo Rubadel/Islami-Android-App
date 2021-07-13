@@ -17,7 +17,7 @@
             android:layout_height="192dp"
             android:layout_gravity="center"
             android:layout_marginTop="198dp"
-            android:backgroundTint="@color/extra_light_purple"
+            android:backgroundTint="@color/purple_white"
             android:clipToPadding="true"
             android:outlineProvider="background"
             app:cardUseCompatPadding="true"
