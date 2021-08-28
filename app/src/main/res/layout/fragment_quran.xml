@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/purple_white"
+        android:background="@color/white_cream"
         tools:context=".main_nav_fragments.QuranFragment">
 
         <androidx.recyclerview.widget.RecyclerView

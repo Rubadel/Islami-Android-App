@@ -9,7 +9,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/purple_white"
+        android:background="@color/white_cream"
         tools:context=".main_nav_fragments.RadioFragment">
 
         <androidx.recyclerview.widget.RecyclerView
@@ -18,6 +18,6 @@
             android:layout_height="754dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="55dp"
-            android:background="@drawable/bckg_removebg" />
+            android:background="@drawable/radio_item_bk" />
     </FrameLayout>
 </layout>

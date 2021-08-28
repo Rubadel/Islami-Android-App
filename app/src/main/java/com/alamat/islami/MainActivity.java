@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.alamat.islami.databinding.ActivityMainBinding;
-import com.alamat.islami.main_nav_fragments.AthkarFragment;
+import com.alamat.islami.pages.AthkarFragment;
 import com.alamat.islami.main_nav_fragments.HadethFragment;
 import com.alamat.islami.main_nav_fragments.QuranFragment;
 import com.alamat.islami.main_nav_fragments.RadioFragment;

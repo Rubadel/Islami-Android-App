@@ -10,10 +10,11 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/purple_white"
+        android:background="@color/white_cream"
         tools:context=".main_nav_fragments.HadethFragment">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:layoutDirection="rtl"
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

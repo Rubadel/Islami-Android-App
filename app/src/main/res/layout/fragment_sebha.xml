@@ -10,85 +10,119 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/sign_in"
+        android:background="#F1E1DC"
         tools:context=".main_nav_fragments.SebhaFragment">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/athkar_icon"
-            android:backgroundTint="@color/purple_white">
+            android:background="@drawable/ic_e_sebha"
+            android:backgroundTint="@color/b_golden">
 
 
             <TextView
                 android:id="@+id/tv_total"
-                android:layout_width="115dp"
-                android:layout_height="55dp"
-                android:layout_marginTop="188dp"
-                android:background="@drawable/custom_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="176dp"
                 android:gravity="center"
-                android:text=" مجموع التسبيحات"
-                android:textColor="@color/dark_purple"
+                android:text="0"
+                android:textColor="@color/dark_blue"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.33"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_single"
-                android:layout_width="110dp"
-                android:layout_height="51dp"
-                android:layout_marginTop="52dp"
-                android:background="@drawable/custom_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
                 android:gravity="center"
-                android:text="مجموع التسبيحة"
-                android:textColor="@color/dark_purple"
+                android:text="0"
+                android:textColor="@color/dark_pb"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintHorizontal_bias="0.33"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_total" />
+                app:layout_constraintTop_toTopOf="@+id/tv_total" />
 
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="189dp"
-                android:layout_height="35dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:gravity="center"
+                android:backgroundTint="@color/dark_pb"
                 android:layoutDirection="rtl"
+                android:gravity="center"
                 android:spinnerMode="dropdown"
                 android:textDirection="rtl"
-                app:layout_constraintBottom_toTopOf="@+id/tv_total"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.599"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <ImageView
-                android:id="@+id/btn_reset"
-                android:layout_width="37dp"
-                android:layout_height="40dp"
-                android:layout_marginBottom="16dp"
-                android:src="@drawable/ic_rotate"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_single"
-                app:layout_constraintVertical_bias="0.589" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageView
+                android:id="@+id/btn_reset"
+                android:layout_width="43dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="65dp"
+                android:src="@drawable/ic_rotate"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.703"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_single"
+                app:layout_constraintVertical_bias="0.326" />
+
+            <TextView
                 android:id="@+id/btnCounter"
-                android:layout_width="94dp"
-                android:layout_height="86dp"
-                android:src="@drawable/ic_sebha_icon"
+                android:layout_width="92dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:text="اضغط هنا"
+                android:textColor="@color/dark_pb"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_single"
-                app:layout_constraintVertical_bias="0.951" />
+                app:layout_constraintVertical_bias="0.621" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:text="مجموع التسبيحات"
+                android:textColor="@color/dark_pb"
+                android:textDirection="rtl"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.335"
+                app:layout_constraintStart_toEndOf="@+id/tv_total" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="44dp"
+                android:text="مجموع التسبيحة الواحدة"
+                android:textColor="@color/dark_pb"
+                android:textDirection="rtl"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/spinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.076"
+                app:layout_constraintStart_toEndOf="@+id/tv_single" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>

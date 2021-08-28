@@ -43,15 +43,6 @@ public class RecyclerViewAdapterLists extends RecyclerView.Adapter<RecyclerViewA
         this.typeView = typeView;
     }
 
-//    public RecyclerViewAdapterLists(ArrayList<String> contentLines) {
-//        this.contentLines = contentLines;
-//    }
-
-//    public ArrayList<String> getContentLines() {
-//        return contentLines;
-//    }
-
-
     // interfaces
 
     OnItemClickedListener onItemClickedListener;
@@ -113,11 +104,6 @@ public class RecyclerViewAdapterLists extends RecyclerView.Adapter<RecyclerViewA
             }
         }
 
-        //Content
-//        else if(typeView == CONTENT){
-//        holder.contentBinding.tvContent.setText(contentLines.get(position)); }
-
-
     // for interface
         if(onItemClickedListener !=null) {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -128,14 +114,6 @@ public class RecyclerViewAdapterLists extends RecyclerView.Adapter<RecyclerViewA
         });
     }
 
-//        if (onItemClickedListener != null){
-//            holder.gridBinding.tvHadethName.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    onItemClickedListener.onItemClick(position, ListModels[position]);
-//                }
-//            });
-//        }
 }
 
 
@@ -149,27 +127,6 @@ public class RecyclerViewAdapterLists extends RecyclerView.Adapter<RecyclerViewA
             return ListModels.length;
         }
 
-
-//        int countReturend =0;
-        //return list count
-//        if (typeView == LISTlist || typeView == GIRDlist) {
-//            if (ListModels == null) {
-//                countReturend= 0;
-//            } else {
-//
-//                countReturend= ListModels.length;
-//            }
-
-        //return content count
-//        else if (typeView == CONTENT) {
-//
-//            if (contentLines == null) {
-//                countReturend= 0;
-//            } else {
-//
-//                countReturend= contentLines.size();
-//            }
-//        }
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -189,12 +146,6 @@ public class RecyclerViewAdapterLists extends RecyclerView.Adapter<RecyclerViewA
             super(gridBinding.getRoot());
             this.gridBinding = gridBinding;
         }
-
-//        content
-//        public ViewHolder(ItemContentBinding contentBinding) {
-//            super(contentBinding.getRoot());
-//            this.contentBinding = contentBinding;
-//        }
     }
 
 

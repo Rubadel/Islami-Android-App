@@ -10,6 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:backgroundTint="@color/white_cream"
         tools:context=".MainActivity">
 
         <androidx.fragment.app.FragmentContainerView
@@ -25,9 +26,9 @@
             android:id="@+id/nav_bar"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:background="@color/purple_white"
-            app:itemIconTint="@color/dark_purple"
-            app:itemTextColor="@color/dark_purple"
+            android:background="@color/dark_blue"
+            app:itemIconTint="@color/white_cream"
+            app:itemTextColor="@color/white_cream"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fram_layout"

@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/purple_white"
+        android:background="@color/white_cream"
         tools:context=".pages.morningAthkar">
 
         <TextView
@@ -20,7 +20,7 @@
             android:layout_marginTop="5dp"
             android:gravity="center"
             android:text="أذكار الصباح"
-            android:textColor="@color/dark_purple"
+            android:textColor="@color/dark_pb"
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
             android:layout_marginStart="350dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="5dp"
-            android:background="@color/baby_purplr"
+            android:background="@drawable/custom_background"
             android:onClick="returnBack"
             android:src="@drawable/ic_back"
             app:layout_constraintBottom_toTopOf="@+id/recycler_view_athkar"
@@ -50,6 +50,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/athkar_item_bk"
             app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

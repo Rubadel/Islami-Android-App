@@ -10,34 +10,83 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/sign_in"
-        tools:context=".main_nav_fragments.AthkarFragment">
+        android:background="@color/white_cream"
+        tools:context=".pages.AthkarFragment">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/athkar_bk">
 
-            <TextView
+<!--            <com.ogaclejapan.smarttablayout.SmartTabLayout-->
+<!--                android:id="@+id/tablayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:background="@color/dark_pb"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:stl_clickable="true"-->
+<!--                app:stl_defaultTabBackground="?attr/selectableItemBackground"-->
+<!--                app:stl_defaultTabTextAllCaps="true"-->
+<!--                app:stl_defaultTabTextColor="@color/white_cream"-->
+<!--                app:stl_defaultTabTextHorizontalPadding="50dp"-->
+<!--                app:stl_defaultTabTextMinWidth="0dp"-->
+<!--                app:stl_defaultTabTextSize="12sp"-->
+<!--                app:stl_distributeEvenly="false"-->
+<!--                app:stl_dividerColor="#4D000000"-->
+<!--                app:stl_dividerThickness="1dp"-->
+<!--                app:stl_drawDecorationAfterTab="false"-->
+<!--                app:stl_indicatorAlwaysInCenter="false"-->
+<!--                app:stl_indicatorColor="@color/orange"-->
+<!--                app:stl_indicatorCornerRadius="2dp"-->
+<!--                app:stl_indicatorGravity="bottom"-->
+<!--                app:stl_indicatorInFront="false"-->
+<!--                app:stl_indicatorInterpolation="smart"-->
+<!--                app:stl_indicatorThickness="4dp"-->
+<!--                app:stl_indicatorWidth="auto"-->
+<!--                app:stl_indicatorWithoutPadding="false"-->
+<!--                app:stl_overlineColor="#4D000000"-->
+<!--                app:stl_overlineThickness="0dp"-->
+<!--                app:stl_titleOffset="24dp"-->
+<!--                app:stl_underlineColor="#4D000000"-->
+<!--                app:stl_underlineThickness="1dp"-->
+<!--                tools:ignore="MissingConstraints" />-->
+
+
+<!--            <androidx.viewpager.widget.ViewPager-->
+<!--                android:id="@+id/viewpager"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tablayout" />-->
+
+
+                        <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="أذكار الصباح"
-                android:textColor="@color/golden"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
                 android:textDirection="rtl"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_sun"/>
+
             <ImageButton
                 android:id="@+id/btn_sun"
                 android:layout_width="104dp"
                 android:layout_height="92dp"
-                android:layout_marginTop="176dp"
+                android:layout_marginTop="180dp"
                 android:background="@drawable/ic_sun_icon"
                 android:text="Button"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,14 +102,16 @@
                 app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_sun"
-                app:layout_constraintVertical_bias="0.726" />
+                app:layout_constraintVertical_bias="0.672" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="أذكار المساء"
-                android:textColor="@color/dark_purple"
+                android:textColor="@color/dark_pb"
                 app:layout_constraintStart_toStartOf="parent"
                 android:textDirection="rtl"
+                android:textStyle="bold"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_night"/>

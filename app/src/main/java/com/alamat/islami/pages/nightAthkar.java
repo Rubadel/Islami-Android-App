@@ -34,6 +34,7 @@ public class nightAthkar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_night_athkar);
+
         content = getContnet("masaAthkar.txt");
 
         //for RecyclerView
@@ -82,7 +83,8 @@ public class nightAthkar extends AppCompatActivity {
     }
 
     public void returnBack(View v){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this, MainActivity.class);
+//        startActivity(intent);
+        onBackPressed();
     }
 }

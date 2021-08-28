@@ -2,13 +2,13 @@
     <!-- Base application theme. -->
     <style name="Theme.Islami" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/baby_green</item>
-        <item name="colorPrimaryVariant">@color/baby_purplr</item>
-        <item name="colorOnPrimary">@color/baby_purplr</item>
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="colorPrimaryVariant">@color/dark_blue</item>
+        <item name="colorOnPrimary">@color/dark_blue</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/baby_purplr</item>
-        <item name="colorSecondaryVariant">@color/baby_purplr</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/dark_blue</item>
+        <item name="colorSecondaryVariant">@color/dark_blue</item>
+        <item name="colorOnSecondary">@color/dark_blue</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
@@ -16,18 +16,18 @@
 
 
     <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
-        <item name="android:background">@color/extra_light_purple</item>
-        <item name="android:textColor">@color/dark_purple</item>
+        <item name="android:background">@color/white_cream</item>
+        <item name="android:textColor">@color/dark_blue</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textDirection">rtl</item>
         <item name="android:layoutDirection">rtl</item>
-        <item name="android:endColor">@color/dark_purple</item>
+        <item name="android:endColor">@color/dark_blue</item>
         <item name="fontFamily"></item>
     </style>
 
     <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/slash_pic</item>
-        <item name="backgroundInsetTop">@color/baby_purplr</item>
+        <item name="android:windowBackground">@drawable/app_logo</item>
+        <item name="backgroundTint">@color/b_golden</item>
     </style>
 
 </resources>

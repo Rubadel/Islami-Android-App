@@ -10,43 +10,12 @@
     <color name="lightkGray">#A9A9A9</color>
     <color name="DarkGray">#616260</color>
 
-    <color name="SeaGreen">#8da384</color>
-    <color name="silvwhite">#f0f0f1</color>
-    <color name="bkGreen">#e9fbcb</color>
-    <color name="darkgreen">#445340</color>
-    <color name="lightgreen">#788d6e</color>
-    <color name="extralightgreen">#94ac94</color>
-    <color name="oliveg">#aeb470</color>
+    <color name="white_cream">#fcf3e3</color>
+    <color name="dark_blue">#150D32</color>
+    <color name="b_golden">#9f7f53</color>
+    <color name="dark_pb">#241124</color>
 
-
-    <color name="white_cream">#f7fcff</color>
-    <color name="mint_cream">#F5FFFA</color>
-    <color name="dark_blue">#1d2355</color>
-    <color name="subenabi">#802a2b</color>
-    <color name="light_cyan">#e2f7ff</color>
-
-    <color name="gray_blue">#36465f</color>
-    <color name="baby_green">#E7D7EA</color>
-    <color name="tevani">#95b3a7</color>
-
-    <color name="babyBrown">#ad9a72</color>
-    <color name="oranBrow">#c28e62</color>
-    <color name="light_golden">#d8b561</color>
-    <color name="sub_golden">#dda44d</color>
-    <color name="golden">#c79223</color>
-
-    <color name="purple_white">#EBD5F6</color>
-    <color name="pinpurple">#e6cbc2</color>
-    <color name="baby_purplr">#ddc1ea</color>
-    <color name="extra_light_purple">#b0909f</color>
-    <color name="skypurple">#937ebf</color>
-    <color name="purgray">#676982</color>
-    <color name="dark_lavander">#5f5377</color>
-    <color name="lavander">#5f5377</color>
-    <color name="light_purple">#6a536f</color>
-    <color name="dark_purple">#4b3051</color>
-
-
-
+    <color name="yellow">#C3B42E</color>
+    <color name="orange">#c04927</color>
 
 </resources>

@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.alamat.islami.MainActivity;
 import com.alamat.islami.R;
 import com.alamat.islami.RecyclerViewAdapters.RecyclerViewAdapterAthkar;
 import com.alamat.islami.databinding.ActivityMorningAthkarBinding;
@@ -24,11 +23,9 @@ public class morningAthkar extends AppCompatActivity {
 
     ActivityMorningAthkarBinding binding;
 
-
     RecyclerViewAdapterAthkar adapter;
     RecyclerView.LayoutManager layoutManager;
 
-    String title;
     ArrayList<String> content ;
 
 
@@ -85,7 +82,8 @@ public class morningAthkar extends AppCompatActivity {
     }
 
     public void returnBack(View v){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this, AthkarFragment.class);
+//       startActivity(intent);
+        onBackPressed();
     }
 }

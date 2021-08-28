@@ -1,5 +1,6 @@
 package com.alamat.islami.main_nav_fragments;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
@@ -21,6 +22,7 @@ public class SebhaFragment extends Fragment implements AdapterView.OnItemSelecte
     String choice;
     int choicenum, singelCount,totalCount = 0;
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
