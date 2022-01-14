@@ -16,15 +16,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layoutDirection="rtl"
             android:padding="15dp"
             android:text="TEST"
-            android:layoutDirection="rtl"
+            android:textColor="@color/dark_purple"
+            android:textDirection="rtl"
             android:textSize="23sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:textColor="@color/dark_pb"
-            android:textDirection="rtl"
             app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -9,15 +10,23 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white_cream"
-        tools:context=".main_nav_fragments.RadioFragment">
+        tools:context=".main_nav_fragments.RadioFragment"
+        android:background="@drawable/radio_bk" >
+
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imageFilterView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:drawable/screen_background_light_transparent"
+            android:tint="@color/black"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="754dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="55dp"
-            android:background="@drawable/radio_item_bk" />
+            android:layout_marginBottom="55dp"/>
+
     </FrameLayout>
 </layout>

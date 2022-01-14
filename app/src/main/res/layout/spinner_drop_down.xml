@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<TextView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:gravity="end"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
     android:textSize="20sp"
     android:padding="2dp"
-    android:background="@color/white_cream"
-    android:backgroundTint="@color/white_cream"
-    android:textColor="@color/dark_blue"
-    android:layoutDirection="rtl"
-    android:textDirection="rtl">
+    android:textColor="@color/dark_purple"
+    android:background="@color/white"
+    android:textDirection="rtl"
+    >
+
 </TextView>

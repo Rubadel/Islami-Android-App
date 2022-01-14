@@ -10,12 +10,19 @@
     <color name="lightkGray">#A9A9A9</color>
     <color name="DarkGray">#616260</color>
 
-    <color name="white_cream">#fcf3e3</color>
-    <color name="dark_blue">#150D32</color>
-    <color name="b_golden">#9f7f53</color>
-    <color name="dark_pb">#241124</color>
+    <color name="dark_purple">#353868</color>
+<!--    for nav bar, titles, icons -->
+
+    <color name="purple_for_bk">#A3CED4F1</color>
+<!--    for main backgrounds app-->
+
+    <color name="white_cream">#eef1f8</color>
+<!--    for icons of nav bar, bkg of hadeth content -->
 
     <color name="yellow">#C3B42E</color>
-    <color name="orange">#c04927</color>
+<!--    for sun of morning Athkar-->
+
+    <color name="dark_moon">#191A30</color>
+    <!--    moon of the night Athkar-->
 
 </resources>

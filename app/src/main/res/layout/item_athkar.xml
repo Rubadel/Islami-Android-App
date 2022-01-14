@@ -15,25 +15,20 @@
             android:id="@+id/tv_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white_cream"
             android:gravity="center"
+            android:layoutDirection="rtl"
             android:padding="15dp"
             android:text="TEST"
-            android:background="@color/white_cream"
-            android:textColor="@color/dark_pb"
-            android:layoutDirection="rtl"
+            android:textColor="@color/black"
+            android:textDirection="rtl"
             android:textSize="23sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:textStyle="bold"
-            android:textDirection="rtl"
             app:layout_constraintVertical_bias="0.023"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="___________________________________________________________"
-            app:layout_constraintTop_toBottomOf="@+id/tv_content"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

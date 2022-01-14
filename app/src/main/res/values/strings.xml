@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Islamic</string>
-    <string name="quran_label">قرآن</string>
+    <string name="quran_label">المصحف</string>
     <string name="hadeth_label">أحاديث</string>
     <string name="athkar_label">أذكار</string>
     <string name="radio_label">راديو</string>
@@ -11,11 +11,12 @@
 
     //For Spinner view
     <string-array name="athkar">
-        <item> استغفر الله </item>
-        <item> سبحان الله </item>
         <item> الحمدلله </item>
         <item> الله أكبر </item>
-        <item> لا إله إلّا الله </item>
+        <item> سبحان الله وبحمده </item>
+        <item> استغفر الله و أتوب اليه </item>
+        <item> اللهم صلّ و سلم على نبينا محمد </item>
+        <item> لا إله إلّا الله وحده لا شريك له الملك و له الحمد و هو على كل شيء قدير </item>
     </string-array>
 
 </resources>

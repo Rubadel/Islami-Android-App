@@ -17,7 +17,7 @@
         android:title="@string/hadeth_label"/>
     <item
         android:id="@+id/athkar_btn_nav"
-        android:icon="@drawable/athkar_icon"
+        android:icon="@drawable/ic_athkar_icon"
         android:title="@string/athkar_label"/>
 
     <item

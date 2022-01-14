@@ -10,13 +10,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white_cream">
+        android:backgroundTint="@color/purple_for_bk">
 
         <ImageView
             android:id="@+id/iv_hadeth_labeled"
             android:layout_width="wrap_content"
             android:layout_height="135dp"
-            android:background="@drawable/label_hadeth"
+            android:background="@drawable/ic_hadeth_label"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -25,12 +25,13 @@
 
         <TextView
             android:id="@+id/tv_hadethName"
-            android:layout_width="45dp"
+            android:layout_width="50dp"
             android:layout_height="48dp"
             android:autoSizeTextType="uniform"
             android:gravity="center"
             android:text="الحديث السابع عشر "
-            android:textColor="@color/dark_blue"
+            android:textSize="27sp"
+            android:textColor="@color/dark_purple"
             app:layout_constraintBottom_toBottomOf="@+id/iv_hadeth_labeled"
             app:layout_constraintEnd_toEndOf="@+id/iv_hadeth_labeled"
             app:layout_constraintHorizontal_bias="0.525"
