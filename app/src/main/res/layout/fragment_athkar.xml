@@ -10,14 +10,14 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white_cream"
+        android:background="@color/white_turq"
         tools:context=".pages.AthkarFragment">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/purple_for_bk">
+            android:background="@color/white_turq">
 
 <!--            <com.ogaclejapan.smarttablayout.SmartTabLayout-->
 <!--                android:id="@+id/tablayout"-->

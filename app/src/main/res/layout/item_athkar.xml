@@ -9,13 +9,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white_cream">
+        android:backgroundTint="@color/white_turq">
 
         <TextView
             android:id="@+id/tv_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white_cream"
+            android:background="@color/white_turq"
             android:gravity="center"
             android:layoutDirection="rtl"
             android:padding="15dp"

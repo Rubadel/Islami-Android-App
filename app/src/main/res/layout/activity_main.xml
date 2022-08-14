@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="@color/white_cream"
+        android:backgroundTint="@color/white_turq"
         tools:context=".MainActivity">
 
         <androidx.fragment.app.FragmentContainerView
@@ -27,9 +27,9 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_gravity="bottom"
-            android:background="@color/dark_purple"
-            app:itemIconTint="@color/white_cream"
-            app:itemTextColor="@color/white_cream"
+            android:background="@color/dark_turquoise"
+            app:itemIconTint="@color/white_turq"
+            app:itemTextColor="@color/white_turq"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

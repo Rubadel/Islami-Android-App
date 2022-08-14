@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white_cream"
+        android:background="@color/white_turq"
         tools:context=".pages.nightAthkar">
 
         <TextView
@@ -21,7 +21,7 @@
             android:background="@color/white"
             android:gravity="center"
             android:text="أذكار المساء"
-            android:textColor="@color/dark_purple"
+            android:textColor="@color/dark_turquoise"
             android:textSize="23sp"
             app:layout_constraintBottom_toTopOf="@+id/recycler_view_athkar"
             app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
             android:layout_marginStart="350dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="5dp"
-            android:background="@drawable/custom_background"
+            android:background="@color/white"
             android:onClick="returnBack"
             android:src="@drawable/ic_back_icon"
             app:layout_constraintBottom_toTopOf="@+id/recycler_view_athkar"
@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="50dp"
-            android:background="@drawable/athkar_bk"
+            android:background="@color/white_turq"
             android:layoutDirection="rtl"
             android:textDirection="rtl"
             app:layout_constraintBottom_toBottomOf="parent"

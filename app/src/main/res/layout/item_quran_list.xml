@@ -10,33 +10,31 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/purple_for_bk">
+        android:backgroundTint="@color/white_turq">
 
         <ImageView
             android:id="@+id/iv_quran_labeled"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
-            android:background="@drawable/ic_quran_label"
+            android:layout_height="20dp"
+            android:background="@drawable/line"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_sorh_Name" />
 
         <TextView
             android:id="@+id/tv_sorh_Name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:layout_marginBottom="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="0dp"
             android:gravity="center"
             android:text="سورة "
-            android:textColor="@color/dark_purple"
+            android:textColor="@color/dark_turquoise"
             android:textSize="23sp"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_quran_labeled"
             app:layout_constraintEnd_toEndOf="@+id/iv_quran_labeled"
             app:layout_constraintStart_toStartOf="@+id/iv_quran_labeled"
-            app:layout_constraintTop_toTopOf="@+id/iv_quran_labeled"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.508" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

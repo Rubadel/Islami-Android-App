@@ -10,26 +10,25 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/purple_for_bk"
+        android:background="@color/white_turq"
         tools:context=".main_nav_fragments.QuranFragment">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_top_meshaf_design"/>
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="620dp"
-            android:layout_marginTop="55dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="676dp"
-            android:src="@drawable/ic_buttom_meshaaf_design"/>
+
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="676dp"/>-->
     </FrameLayout>
 </layout>

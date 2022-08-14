@@ -11,14 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".main_nav_fragments.RadioFragment"
-        android:background="@drawable/radio_bk" >
+        android:background="@color/white" >
 
 
         <androidx.constraintlayout.utils.widget.ImageFilterView
             android:id="@+id/imageFilterView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@android:drawable/screen_background_light_transparent"
+            android:background="@color/white_turq"
             android:tint="@color/black"/>
 
         <androidx.recyclerview.widget.RecyclerView

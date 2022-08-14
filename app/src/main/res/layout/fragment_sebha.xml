@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/purple_for_bk"
+        android:background="@color/white_turq"
         tools:context=".main_nav_fragments.SebhaFragment">
 
 
@@ -21,7 +21,7 @@
             android:layout_marginStart="55dp"
             android:layout_marginTop="100dp"
             android:layout_marginEnd="55dp"
-            android:background="@drawable/output_sebha_screen">
+            android:background="@drawable/custom_background">
 
             <TextView
                 android:id="@+id/tv_total"
@@ -30,7 +30,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
                 android:text="0"
-                android:textColor="@color/dark_purple"
+                android:textColor="@color/dark_turquoise"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/output_screen"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="مجموع التسبيحات"
-                android:textColor="@color/dark_purple"
+                android:textColor="@color/dark_turquoise"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@id/output_screen"
                 app:layout_constraintHorizontal_bias="0.726"
@@ -59,7 +59,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="33dp"
                 android:text="0"
-                android:textColor="@color/dark_purple"
+                android:textColor="@color/dark_turquoise"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/output_screen"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
                 android:text="مجموع التسبيحة الواحدة"
-                android:textColor="@color/dark_purple"
+                android:textColor="@color/dark_turquoise"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@id/output_screen"
                 app:layout_constraintHorizontal_bias="0.865"
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="33dp"
             android:layout_marginTop="399dp"
-            android:backgroundTint="@color/dark_purple"
+            android:backgroundTint="@color/dark_turquoise"
             android:spinnerMode="dropdown"
             android:layoutDirection="rtl"/>
 
@@ -102,14 +102,29 @@
             android:layout_marginTop="480dp"
             android:src="@drawable/ic_rotate" />
 
-        <ImageButton
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="188dp"-->
+<!--            android:layout_marginTop="575dp"-->
+<!--            android:text="اضغط هنا"-->
+<!--            android:textColor="@color/dark_turquoise"-->
+<!--            android:textSize="15sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.498"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv_single"-->
+<!--            app:layout_constraintVertical_bias="0.621" />-->
+
+        <Button
             android:id="@+id/btnCounter"
             android:layout_width="150dp"
             android:layout_height="140dp"
             android:layout_marginStart="135dp"
             android:layout_marginTop="515dp"
-            android:background="@drawable/ic_button_icon"
-            android:textSize="15sp"
+            android:background="@drawable/ic_btn_icon"
+            android:tint="@color/dark_turquoise"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -117,20 +132,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_single"
             app:layout_constraintVertical_bias="0.621" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="188dp"
-            android:layout_marginTop="575dp"
-            android:text="اضغط هنا"
-            android:textColor="@color/white_cream"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_single"
-            app:layout_constraintVertical_bias="0.621" />
+
 
 
         <!--            <TextView-->

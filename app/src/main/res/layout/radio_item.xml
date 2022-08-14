@@ -9,16 +9,17 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:background="@color/white_turq">
 
 
         <androidx.cardview.widget.CardView
             android:id="@+id/radio_card_view"
             android:layout_width="match_parent"
-            android:layout_height="192dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="225dp"
-            android:backgroundTint="@color/purple_for_bk"
+            android:backgroundTint="@color/turquoise_for_bk"
             android:clipToPadding="true"
             android:outlineProvider="background"
             app:cardCornerRadius="10dp"
@@ -28,7 +29,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintVertical_bias="0.073">
 
             <TextView
                 android:id="@+id/tv_radio_name"
@@ -37,7 +38,7 @@
                 android:layout_marginTop="50dp"
                 android:text="اسم الاذاعة"
                 android:textAlignment="center"
-                android:textColor="@color/white_cream"
+                android:textColor="@color/dark_turquoise"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +54,8 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="130dp"
                 android:layout_marginEnd="145dp"
-                android:src="@drawable/ic_play_icon" />
+                android:src="@drawable/ic_play_icon"
+                android:tint="@color/dark_turquoise"/>
 
             <ImageView
                 android:id="@+id/btn_stop"
@@ -62,7 +64,8 @@
                 android:layout_gravity="start"
                 android:layout_marginStart="145dp"
                 android:layout_marginTop="130dp"
-                android:src="@drawable/ic_stop_icon" />
+                android:src="@drawable/ic_stop_icon"
+                android:tint="@color/dark_turquoise"/>
 
 
         </androidx.cardview.widget.CardView>
